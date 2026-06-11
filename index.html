@@ -323,6 +323,57 @@ main { padding: 28px 0 56px; }
   .latest-item--media h3 { font-size: 15px; }
 }
 
+
+/* === GROUP FEATURE IMAGE SIZE ADJUSTMENT === */
+@media (min-width: 1100px) {
+  .group-section__grid {
+    grid-template-columns: 2fr 1fr !important;
+    gap: 40px !important;
+    align-items: start;
+  }
+  .group-section .section-feature {
+    width: 100%;
+  }
+  .group-section .section-feature img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+  .group-section .headline-list {
+    align-self: start;
+  }
+}
+
+
+/* === BACK TO HOME BUTTON === */
+.back-home-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 30px;
+  padding: 6px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.back-home-link:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+@media (max-width: 640px) {
+  .section-title {
+    gap: 10px;
+    align-items: flex-start;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -389,27 +440,27 @@ main { padding: 28px 0 56px; }
   </div>
   <nav class="group-nav">
     <div class="container">
-      <a href="#inicio">Hogar</a><a href="#hidroelectricidad">Hidroelectricidad</a><a href="#generacion-electrica">Generación Eléctrica</a><a href="#emisiones-y-carbono">Emisiones y Carbono</a><a href="#infraestructura-hidrica">Infraestructura hídrica</a><a href="#marco-legal-fuentes">Marco Legal (fuentes)</a><a href="#bonos-de-carbono">Bonos de Carbono</a><a href="#recursos-hidricos">Recursos Hídricos</a><a href="#caudales-sequias">Caudales / Sequías</a><a href="#bioenergia">Bioenergía</a><a href="#hidrogeno-combustibles">Hidrógeno / Combustibles</a><a href="#sociedad-y-ambiente">Sociedad y Ambiente</a><a href="#transicion-energetica">Transición Energética</a><a href="#seguridad">Seguridad</a>
+      <a href="#inicio">Inicio</a><a href="#transicion-energetica">Transición Energética</a><a href="#bioenergia">Bioenergía</a><a href="#bonos-de-carbono">Bonos de Carbono</a><a href="#caudales-sequias">Caudales / Sequías</a><a href="#emisiones-y-carbono">Emisiones y Carbono</a><a href="#generacion-electrica">Generación Eléctrica</a><a href="#hidroelectricidad">Hidroelectricidad</a><a href="#hidrogeno-combustibles">Hidrógeno / Combustibles</a><a href="#infraestructura-hidrica">Infraestructura hídrica</a><a href="#marco-legal-fuentes">Marco Legal (fuentes)</a><a href="#recursos-hidricos">Recursos Hídricos</a><a href="#seguridad">Seguridad</a><a href="#sociedad-y-ambiente">Sociedad y Ambiente</a>
     </div>
   </nav>
 </header>
 
 <nav class="cat-nav">
   <div class="cat-nav__pills">
-    <a class="cat-pill" href="#inicio">Todo</a>
-    <a class="cat-pill" href="#hidroelectricidad">Hidroelectricidad</a>
-    <a class="cat-pill" href="#generacion-electrica">Generación Eléctrica</a>
+    <a class="cat-pill" href="#inicio">Inicio</a>
+    <a class="cat-pill" href="#transicion-energetica">Transición Energética</a>
+    <a class="cat-pill" href="#bioenergia">Bioenergía</a>
+    <a class="cat-pill" href="#bonos-de-carbono">Bonos de Carbono</a>
+    <a class="cat-pill" href="#caudales-sequias">Caudales / Sequías</a>
     <a class="cat-pill" href="#emisiones-y-carbono">Emisiones y Carbono</a>
+    <a class="cat-pill" href="#generacion-electrica">Generación Eléctrica</a>
+    <a class="cat-pill" href="#hidroelectricidad">Hidroelectricidad</a>
+    <a class="cat-pill" href="#hidrogeno-combustibles">Hidrógeno / Combustibles</a>
     <a class="cat-pill" href="#infraestructura-hidrica">Infraestructura hídrica</a>
     <a class="cat-pill" href="#marco-legal-fuentes">Marco Legal (fuentes)</a>
-    <a class="cat-pill" href="#bonos-de-carbono">Bonos de Carbono</a>
     <a class="cat-pill" href="#recursos-hidricos">Recursos Hídricos</a>
-    <a class="cat-pill" href="#caudales-sequias">Caudales / Sequías</a>
-    <a class="cat-pill" href="#bioenergia">Bioenergía</a>
-    <a class="cat-pill" href="#hidrogeno-combustibles">Hidrógeno / Combustibles</a>
-    <a class="cat-pill" href="#sociedad-y-ambiente">Sociedad y Ambiente</a>
-    <a class="cat-pill" href="#transicion-energetica">Transición Energética</a>
     <a class="cat-pill" href="#seguridad">Seguridad</a>
+    <a class="cat-pill" href="#sociedad-y-ambiente">Sociedad y Ambiente</a>
   </div>
 </nav>
 
@@ -496,6 +547,7 @@ main { padding: 28px 0 56px; }
     <section class="section" id="ultimas">
       <div class="section-title">
         <h2>Últimas noticias</h2>
+        <a class="back-home-link" href="#inicio">Volver al inicio</a>
       </div>
       <div class="latest-grid">
         
@@ -652,18 +704,59 @@ main { padding: 28px 0 56px; }
       <div class="section-title">
         <h2>Última noticia por grupo</h2>
         <span>si no hubo noticias del día, se muestra la más reciente del archivo</span>
+        <a class="back-home-link" href="#inicio">Volver al inicio</a>
       </div>
       <div class="group-cards">
         
     
 
     <article class="group-card">
-      <img src="https://pxcdn.ellitoral.com.ar/litoral/062026/1781104388913.jpg?&amp;cw=1200&amp;ch=630" alt="Juan Pablo Valdés recibió al embajador de Austria con una agenda para atraer inversiones ..." loading="lazy">
+      <img src="https://infoenergia.info/images/resize/667850-1200x675.webp" alt="Autorizan dos nuevos parques solares en Corrientes que aportarán 27 MW al sistema ... - IN Salta" loading="lazy">
       <div class="group-card__body">
-        <div class="group-card__kicker">Hidroelectricidad</div>
-        <h3><a href="https://www.ellitoral.com.ar/actualidad/2026-6-10-12-6-0-juan-pablo-valdes-recibio-al-embajador-de-austria-con-una-agenda-para-traer-inversiones-a-corrientes" target="_blank" rel="noopener">Juan Pablo Valdés recibió al embajador de Austria con una agenda para atraer inversiones ...</a></h3>
-        <p>Tras el encuentro realizado en Casa de Gobierno, la comitiva se trasladó a las localidades de Ituzaingó y Gobernador Virasoro, donde recorrieron ...</p>
-        <div class="meta">11 jun 2026 · ellitoral.com.ar</div>
+        <div class="group-card__kicker">Transición Energética</div>
+        <h3><a href="https://insalta.info/infoenergia/autorizan-dos-nuevos-parques-solares-en-corrientes-que-aportaran-27-mw-al-sistema-electrico-argentino-2" target="_blank" rel="noopener">Autorizan dos nuevos parques solares en Corrientes que aportarán 27 MW al sistema ... - IN Salta</a></h3>
+        <p>... energía renovable, fortaleciendo el crecimiento de la ... Dirección Provincial de Energía de Corrientes (DPEC) y la transportista Transnea.</p>
+        <div class="meta">02 jun 2026 · insalta.info</div>
+      </div>
+    </article>
+
+    <article class="group-card">
+      <img src="data:image/svg+xml,%0A%20%20%20%20%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201280%20720%27%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23010066%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2742%25%27%20stop-color%3D%27%230c2e8a%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2776%25%27%20stop-color%3D%27%232e6ea8%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%234d86bb%27/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%271280%27%20height%3D%27720%27%20fill%3D%27url%28%23g%29%27/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27145%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2740%27%20fill%3D%27rgba%28255%2C255%2C255%2C.82%29%27%3ENoticias%20del%20Sector%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27285%27%20font-family%3D%27Georgia%2C%20serif%27%20font-size%3D%2768%27%20fill%3D%27%23ffffff%27%3EBioenerg%C3%ADa%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27385%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2734%27%20fill%3D%27rgba%28255%2C255%2C255%2C.90%29%27%3ESIROPE%20DE%20FRESA%20400%20GR%20-%20BioEnergy%20Sport%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="SIROPE DE FRESA 400 GR - BioEnergy Sport" loading="lazy">
+      <div class="group-card__body">
+        <div class="group-card__kicker">Bioenergía</div>
+        <h3><a href="https://bioenergysport.com/productos/sirope-de-fresa-400-gr/" target="_blank" rel="noopener">SIROPE DE FRESA 400 GR - BioEnergy Sport</a></h3>
+        <p>SIROPE DE FRESA 400 GR · Baja en calorías y 0% en grasas · Aptos para diabéticos · Sirope endulzado a base de stevia.</p>
+        <div class="meta">08 jun 2026 · bioenergysport.com</div>
+      </div>
+    </article>
+
+    <article class="group-card">
+      <img src="data:image/svg+xml,%0A%20%20%20%20%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201280%20720%27%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23010066%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2742%25%27%20stop-color%3D%27%230c2e8a%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2776%25%27%20stop-color%3D%27%232e6ea8%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%234d86bb%27/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%271280%27%20height%3D%27720%27%20fill%3D%27url%28%23g%29%27/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27145%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2740%27%20fill%3D%27rgba%28255%2C255%2C255%2C.82%29%27%3ENoticias%20del%20Sector%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27285%27%20font-family%3D%27Georgia%2C%20serif%27%20font-size%3D%2768%27%20fill%3D%27%23ffffff%27%3EBonos%20de%20Carbono%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27385%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2734%27%20fill%3D%27rgba%28255%2C255%2C255%2C.90%29%27%3EBonos%20verdes%20y%20producci%C3%B3n%20sustentable%3A%20%26quot%3BCorrientes%20puede%20cobrar%E2%80%A6%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="Bonos verdes y producción sustentable: &amp;quot;Corrientes puede cobrar por limpiar el aire del mundo&amp;quot;" loading="lazy">
+      <div class="group-card__body">
+        <div class="group-card__kicker">Bonos de Carbono</div>
+        <h3><a href="https://www.noticiero9.com.ar/27004-bonos-verdes-y-produccion-sustentable-corrientes-puede-cobrar-por-limpiar-el-aire-del-mundo" target="_blank" rel="noopener">Bonos verdes y producción sustentable: &amp;quot;Corrientes puede cobrar por limpiar el aire del mundo&amp;quot;</a></h3>
+        <p>La discusión por los bonos verdes, los bonos de carbono y la ... provincia de Corrientes&quot;. El productor sostuvo que Corrientes ya cuenta ...</p>
+        <div class="meta">09 jun 2026 · noticiero9.com.ar</div>
+      </div>
+    </article>
+
+    <article class="group-card">
+      <img src="data:image/svg+xml,%0A%20%20%20%20%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201280%20720%27%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23010066%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2742%25%27%20stop-color%3D%27%230c2e8a%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2776%25%27%20stop-color%3D%27%232e6ea8%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%234d86bb%27/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%271280%27%20height%3D%27720%27%20fill%3D%27url%28%23g%29%27/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27145%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2740%27%20fill%3D%27rgba%28255%2C255%2C255%2C.82%29%27%3ENoticias%20del%20Sector%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27285%27%20font-family%3D%27Georgia%2C%20serif%27%20font-size%3D%2768%27%20fill%3D%27%23ffffff%27%3ECaudales%20/%20Sequ%C3%ADas%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27385%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2734%27%20fill%3D%27rgba%28255%2C255%2C255%2C.90%29%27%3EEl%20Ni%C3%B1o%20ya%20tiene%20fecha%3A%20Se%20confirmar%C3%ADa%20entre%20julio%20y%20agosto%20y%20s%E2%80%A6%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="El Niño ya tiene fecha: Se confirmaría entre julio y agosto y sería muy fuerte hacia fin de año" loading="lazy">
+      <div class="group-card__body">
+        <div class="group-card__kicker">Caudales / Sequías</div>
+        <h3><a href="https://elecodesunchales.com.ar/contenido/143551/el-nino-ya-tiene-fecha-se-confirmaria-entre-julio-y-agosto-y-seria-muy-fuerte-ha" target="_blank" rel="noopener">El Niño ya tiene fecha: Se confirmaría entre julio y agosto y sería muy fuerte hacia fin de año</a></h3>
+        <p>El Niño ya tiene fecha: Se confirmaría entre ... Aquel año estuvo marcado por precipitaciones abundantes y una importante crecida del río Paraná.</p>
+        <div class="meta">09 jun 2026 · elecodesunchales.com.ar</div>
+      </div>
+    </article>
+
+    <article class="group-card">
+      <img src="https://www.corrientespositiva.com.ar/notix/multimedia/imagenes/fotos/2026-06-10/235992.jpg" alt="El Gobierno de Corrientes activa un plan preventivo ante la llegada del &amp;quot;Superniño&amp;quot;" loading="lazy">
+      <div class="group-card__body">
+        <div class="group-card__kicker">Emisiones y Carbono</div>
+        <h3><a href="https://www.corrientespositiva.com.ar/notix/noticia/68457/el-gobierno-de-corrientes-activa-un-plan-preventivo-ante-la-llegada-del-supernio.htm" target="_blank" rel="noopener">El Gobierno de Corrientes activa un plan preventivo ante la llegada del &amp;quot;Superniño&amp;quot;</a></h3>
+        <p>El Gobierno de Corrientes activa un plan preventivo ante la llegada del &quot;Superniño&quot; ... Además, se prevé la ejecución de obras puntuales de mitigación ...</p>
+        <div class="meta">10 jun 2026 · corrientespositiva.com.ar</div>
       </div>
     </article>
 
@@ -678,12 +771,22 @@ main { padding: 28px 0 56px; }
     </article>
 
     <article class="group-card">
-      <img src="https://www.corrientespositiva.com.ar/notix/multimedia/imagenes/fotos/2026-06-10/235992.jpg" alt="El Gobierno de Corrientes activa un plan preventivo ante la llegada del &amp;quot;Superniño&amp;quot;" loading="lazy">
+      <img src="https://pxcdn.ellitoral.com.ar/litoral/062026/1781104388913.jpg?&amp;cw=1200&amp;ch=630" alt="Juan Pablo Valdés recibió al embajador de Austria con una agenda para atraer inversiones ..." loading="lazy">
       <div class="group-card__body">
-        <div class="group-card__kicker">Emisiones y Carbono</div>
-        <h3><a href="https://www.corrientespositiva.com.ar/notix/noticia/68457/el-gobierno-de-corrientes-activa-un-plan-preventivo-ante-la-llegada-del-supernio.htm" target="_blank" rel="noopener">El Gobierno de Corrientes activa un plan preventivo ante la llegada del &amp;quot;Superniño&amp;quot;</a></h3>
-        <p>El Gobierno de Corrientes activa un plan preventivo ante la llegada del &quot;Superniño&quot; ... Además, se prevé la ejecución de obras puntuales de mitigación ...</p>
-        <div class="meta">10 jun 2026 · corrientespositiva.com.ar</div>
+        <div class="group-card__kicker">Hidroelectricidad</div>
+        <h3><a href="https://www.ellitoral.com.ar/actualidad/2026-6-10-12-6-0-juan-pablo-valdes-recibio-al-embajador-de-austria-con-una-agenda-para-traer-inversiones-a-corrientes" target="_blank" rel="noopener">Juan Pablo Valdés recibió al embajador de Austria con una agenda para atraer inversiones ...</a></h3>
+        <p>Tras el encuentro realizado en Casa de Gobierno, la comitiva se trasladó a las localidades de Ituzaingó y Gobernador Virasoro, donde recorrieron ...</p>
+        <div class="meta">11 jun 2026 · ellitoral.com.ar</div>
+      </div>
+    </article>
+
+    <article class="group-card">
+      <img src="data:image/svg+xml,%0A%20%20%20%20%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201280%20720%27%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23010066%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2742%25%27%20stop-color%3D%27%230c2e8a%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2776%25%27%20stop-color%3D%27%232e6ea8%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%234d86bb%27/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%271280%27%20height%3D%27720%27%20fill%3D%27url%28%23g%29%27/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27145%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2740%27%20fill%3D%27rgba%28255%2C255%2C255%2C.82%29%27%3ENoticias%20del%20Sector%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27285%27%20font-family%3D%27Georgia%2C%20serif%27%20font-size%3D%2768%27%20fill%3D%27%23ffffff%27%3EHidr%C3%B3geno%20/%20Combustibles%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27385%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2734%27%20fill%3D%27rgba%28255%2C255%2C255%2C.90%29%27%3EEn%20Argentina%2C%20dos%20parques%20fotovoltaicos%20que%20suman%2025%20MW%20solicit%E2%80%A6%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="En Argentina, dos parques fotovoltaicos que suman 25 MW solicitan capacidad de transporte" loading="lazy">
+      <div class="group-card__body">
+        <div class="group-card__kicker">Hidrógeno / Combustibles</div>
+        <h3><a href="https://www.pv-magazine-latam.com/2026/06/03/en-argentina-dos-parques-fotovoltaicos-que-suman-25-mw-solicitan-capacidad-de-transporte/" target="_blank" rel="noopener">En Argentina, dos parques fotovoltaicos que suman 25 MW solicitan capacidad de transporte</a></h3>
+        <p>... provincia de Corrientes, por Industrias Juan F. Secco ... Hidrógeno · Seguidores / Sistemas de montaje · Software · Electromovilidad · Plug &amp; Play ...</p>
+        <div class="meta">04 jun 2026 · pv-magazine-latam.com</div>
       </div>
     </article>
 
@@ -708,72 +811,12 @@ main { padding: 28px 0 56px; }
     </article>
 
     <article class="group-card">
-      <img src="data:image/svg+xml,%0A%20%20%20%20%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201280%20720%27%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23010066%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2742%25%27%20stop-color%3D%27%230c2e8a%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2776%25%27%20stop-color%3D%27%232e6ea8%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%234d86bb%27/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%271280%27%20height%3D%27720%27%20fill%3D%27url%28%23g%29%27/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27145%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2740%27%20fill%3D%27rgba%28255%2C255%2C255%2C.82%29%27%3ENoticias%20del%20Sector%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27285%27%20font-family%3D%27Georgia%2C%20serif%27%20font-size%3D%2768%27%20fill%3D%27%23ffffff%27%3EBonos%20de%20Carbono%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27385%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2734%27%20fill%3D%27rgba%28255%2C255%2C255%2C.90%29%27%3EBonos%20verdes%20y%20producci%C3%B3n%20sustentable%3A%20%26quot%3BCorrientes%20puede%20cobrar%E2%80%A6%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="Bonos verdes y producción sustentable: &amp;quot;Corrientes puede cobrar por limpiar el aire del mundo&amp;quot;" loading="lazy">
-      <div class="group-card__body">
-        <div class="group-card__kicker">Bonos de Carbono</div>
-        <h3><a href="https://www.noticiero9.com.ar/27004-bonos-verdes-y-produccion-sustentable-corrientes-puede-cobrar-por-limpiar-el-aire-del-mundo" target="_blank" rel="noopener">Bonos verdes y producción sustentable: &amp;quot;Corrientes puede cobrar por limpiar el aire del mundo&amp;quot;</a></h3>
-        <p>La discusión por los bonos verdes, los bonos de carbono y la ... provincia de Corrientes&quot;. El productor sostuvo que Corrientes ya cuenta ...</p>
-        <div class="meta">09 jun 2026 · noticiero9.com.ar</div>
-      </div>
-    </article>
-
-    <article class="group-card">
       <img src="data:image/svg+xml,%0A%20%20%20%20%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201280%20720%27%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23010066%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2742%25%27%20stop-color%3D%27%230c2e8a%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2776%25%27%20stop-color%3D%27%232e6ea8%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%234d86bb%27/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%271280%27%20height%3D%27720%27%20fill%3D%27url%28%23g%29%27/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27145%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2740%27%20fill%3D%27rgba%28255%2C255%2C255%2C.82%29%27%3ENoticias%20del%20Sector%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27285%27%20font-family%3D%27Georgia%2C%20serif%27%20font-size%3D%2768%27%20fill%3D%27%23ffffff%27%3ERecursos%20H%C3%ADdricos%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27385%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2734%27%20fill%3D%27rgba%28255%2C255%2C255%2C.90%29%27%3E%C2%BFR%C3%ADos%20libres%3F%20%7C%20Brasil%20erigi%C3%B3%20m%C3%A1s%20de%2060%20represas%20en%20el%20Paran%C3%A1%20y%E2%80%A6%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="¿Ríos libres? | Brasil erigió más de 60 represas en el Paraná y 6 sobre el Iguazú - MisionesOnline" loading="lazy">
       <div class="group-card__body">
         <div class="group-card__kicker">Recursos Hídricos</div>
         <h3><a href="https://misionesonline.net/2026/06/09/brasil-erigio-mas-de-60-represas-en-el-parana-y-6-sobre-el-iguazu/" target="_blank" rel="noopener">¿Ríos libres? | Brasil erigió más de 60 represas en el Paraná y 6 sobre el Iguazú - MisionesOnline</a></h3>
         <p>La Cuenca del Paraná, que abastece el embalse de ITAIPU, abarca seis Estados brasileños y el Distrito Federal. ... río, en la provincia de Corrientes.</p>
         <div class="meta">09 jun 2026 · misionesonline.net</div>
-      </div>
-    </article>
-
-    <article class="group-card">
-      <img src="data:image/svg+xml,%0A%20%20%20%20%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201280%20720%27%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23010066%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2742%25%27%20stop-color%3D%27%230c2e8a%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2776%25%27%20stop-color%3D%27%232e6ea8%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%234d86bb%27/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%271280%27%20height%3D%27720%27%20fill%3D%27url%28%23g%29%27/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27145%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2740%27%20fill%3D%27rgba%28255%2C255%2C255%2C.82%29%27%3ENoticias%20del%20Sector%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27285%27%20font-family%3D%27Georgia%2C%20serif%27%20font-size%3D%2768%27%20fill%3D%27%23ffffff%27%3ECaudales%20/%20Sequ%C3%ADas%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27385%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2734%27%20fill%3D%27rgba%28255%2C255%2C255%2C.90%29%27%3EEl%20Ni%C3%B1o%20ya%20tiene%20fecha%3A%20Se%20confirmar%C3%ADa%20entre%20julio%20y%20agosto%20y%20s%E2%80%A6%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="El Niño ya tiene fecha: Se confirmaría entre julio y agosto y sería muy fuerte hacia fin de año" loading="lazy">
-      <div class="group-card__body">
-        <div class="group-card__kicker">Caudales / Sequías</div>
-        <h3><a href="https://elecodesunchales.com.ar/contenido/143551/el-nino-ya-tiene-fecha-se-confirmaria-entre-julio-y-agosto-y-seria-muy-fuerte-ha" target="_blank" rel="noopener">El Niño ya tiene fecha: Se confirmaría entre julio y agosto y sería muy fuerte hacia fin de año</a></h3>
-        <p>El Niño ya tiene fecha: Se confirmaría entre ... Aquel año estuvo marcado por precipitaciones abundantes y una importante crecida del río Paraná.</p>
-        <div class="meta">09 jun 2026 · elecodesunchales.com.ar</div>
-      </div>
-    </article>
-
-    <article class="group-card">
-      <img src="data:image/svg+xml,%0A%20%20%20%20%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201280%20720%27%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23010066%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2742%25%27%20stop-color%3D%27%230c2e8a%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2776%25%27%20stop-color%3D%27%232e6ea8%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%234d86bb%27/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%271280%27%20height%3D%27720%27%20fill%3D%27url%28%23g%29%27/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27145%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2740%27%20fill%3D%27rgba%28255%2C255%2C255%2C.82%29%27%3ENoticias%20del%20Sector%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27285%27%20font-family%3D%27Georgia%2C%20serif%27%20font-size%3D%2768%27%20fill%3D%27%23ffffff%27%3EBioenerg%C3%ADa%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27385%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2734%27%20fill%3D%27rgba%28255%2C255%2C255%2C.90%29%27%3ESIROPE%20DE%20FRESA%20400%20GR%20-%20BioEnergy%20Sport%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="SIROPE DE FRESA 400 GR - BioEnergy Sport" loading="lazy">
-      <div class="group-card__body">
-        <div class="group-card__kicker">Bioenergía</div>
-        <h3><a href="https://bioenergysport.com/productos/sirope-de-fresa-400-gr/" target="_blank" rel="noopener">SIROPE DE FRESA 400 GR - BioEnergy Sport</a></h3>
-        <p>SIROPE DE FRESA 400 GR · Baja en calorías y 0% en grasas · Aptos para diabéticos · Sirope endulzado a base de stevia.</p>
-        <div class="meta">08 jun 2026 · bioenergysport.com</div>
-      </div>
-    </article>
-
-    <article class="group-card">
-      <img src="data:image/svg+xml,%0A%20%20%20%20%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201280%20720%27%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23010066%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2742%25%27%20stop-color%3D%27%230c2e8a%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2776%25%27%20stop-color%3D%27%232e6ea8%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%234d86bb%27/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%271280%27%20height%3D%27720%27%20fill%3D%27url%28%23g%29%27/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27145%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2740%27%20fill%3D%27rgba%28255%2C255%2C255%2C.82%29%27%3ENoticias%20del%20Sector%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27285%27%20font-family%3D%27Georgia%2C%20serif%27%20font-size%3D%2768%27%20fill%3D%27%23ffffff%27%3EHidr%C3%B3geno%20/%20Combustibles%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27385%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2734%27%20fill%3D%27rgba%28255%2C255%2C255%2C.90%29%27%3EEn%20Argentina%2C%20dos%20parques%20fotovoltaicos%20que%20suman%2025%20MW%20solicit%E2%80%A6%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="En Argentina, dos parques fotovoltaicos que suman 25 MW solicitan capacidad de transporte" loading="lazy">
-      <div class="group-card__body">
-        <div class="group-card__kicker">Hidrógeno / Combustibles</div>
-        <h3><a href="https://www.pv-magazine-latam.com/2026/06/03/en-argentina-dos-parques-fotovoltaicos-que-suman-25-mw-solicitan-capacidad-de-transporte/" target="_blank" rel="noopener">En Argentina, dos parques fotovoltaicos que suman 25 MW solicitan capacidad de transporte</a></h3>
-        <p>... provincia de Corrientes, por Industrias Juan F. Secco ... Hidrógeno · Seguidores / Sistemas de montaje · Software · Electromovilidad · Plug &amp; Play ...</p>
-        <div class="meta">04 jun 2026 · pv-magazine-latam.com</div>
-      </div>
-    </article>
-
-    <article class="group-card">
-      <img src="data:image/svg+xml,%0A%20%20%20%20%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201280%20720%27%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23010066%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2742%25%27%20stop-color%3D%27%230c2e8a%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2776%25%27%20stop-color%3D%27%232e6ea8%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%234d86bb%27/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%271280%27%20height%3D%27720%27%20fill%3D%27url%28%23g%29%27/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27145%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2740%27%20fill%3D%27rgba%28255%2C255%2C255%2C.82%29%27%3ENoticias%20del%20Sector%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27285%27%20font-family%3D%27Georgia%2C%20serif%27%20font-size%3D%2768%27%20fill%3D%27%23ffffff%27%3ESociedad%20y%20Ambiente%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27385%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2734%27%20fill%3D%27rgba%28255%2C255%2C255%2C.90%29%27%3ELa%20Central%20Hidroel%C3%A9ctrica%20A%C3%B1a%20Cu%C3%A1%20tendr%C3%A1%20un%20moderno%20sistema%20par%E2%80%A6%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="La Central Hidroeléctrica Aña Cuá tendrá un moderno sistema para preservar migraciones ..." loading="lazy">
-      <div class="group-card__body">
-        <div class="group-card__kicker">Sociedad y Ambiente</div>
-        <h3><a href="https://www.lapoliticaonline.com/amp/347601-la-central-hidroelectrica-ana-cua-tendra-un-moderno-sistema-para-preservar-migraciones-de-peces-del-parana/" target="_blank" rel="noopener">La Central Hidroeléctrica Aña Cuá tendrá un moderno sistema para preservar migraciones ...</a></h3>
-        <p>... impactos ambientales y preservar la biodiversidad de la región. Uno de ... En el caso del brazo Aña Cuá, el embalse Yacyretá opera a una cota ...</p>
-        <div class="meta">02 jun 2026 · lapoliticaonline.com</div>
-      </div>
-    </article>
-
-    <article class="group-card">
-      <img src="https://infoenergia.info/images/resize/667850-1200x675.webp" alt="Autorizan dos nuevos parques solares en Corrientes que aportarán 27 MW al sistema ... - IN Salta" loading="lazy">
-      <div class="group-card__body">
-        <div class="group-card__kicker">Transición Energética</div>
-        <h3><a href="https://insalta.info/infoenergia/autorizan-dos-nuevos-parques-solares-en-corrientes-que-aportaran-27-mw-al-sistema-electrico-argentino-2" target="_blank" rel="noopener">Autorizan dos nuevos parques solares en Corrientes que aportarán 27 MW al sistema ... - IN Salta</a></h3>
-        <p>... energía renovable, fortaleciendo el crecimiento de la ... Dirección Provincial de Energía de Corrientes (DPEC) y la transportista Transnea.</p>
-        <div class="meta">02 jun 2026 · insalta.info</div>
       </div>
     </article>
 
@@ -786,65 +829,255 @@ main { padding: 28px 0 56px; }
         <div class="meta">27 ene 2026 · eby.gov.py</div>
       </div>
     </article>
+
+    <article class="group-card">
+      <img src="data:image/svg+xml,%0A%20%20%20%20%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201280%20720%27%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23010066%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2742%25%27%20stop-color%3D%27%230c2e8a%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2776%25%27%20stop-color%3D%27%232e6ea8%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%234d86bb%27/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%271280%27%20height%3D%27720%27%20fill%3D%27url%28%23g%29%27/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27145%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2740%27%20fill%3D%27rgba%28255%2C255%2C255%2C.82%29%27%3ENoticias%20del%20Sector%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27285%27%20font-family%3D%27Georgia%2C%20serif%27%20font-size%3D%2768%27%20fill%3D%27%23ffffff%27%3ESociedad%20y%20Ambiente%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27385%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2734%27%20fill%3D%27rgba%28255%2C255%2C255%2C.90%29%27%3ELa%20Central%20Hidroel%C3%A9ctrica%20A%C3%B1a%20Cu%C3%A1%20tendr%C3%A1%20un%20moderno%20sistema%20par%E2%80%A6%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="La Central Hidroeléctrica Aña Cuá tendrá un moderno sistema para preservar migraciones ..." loading="lazy">
+      <div class="group-card__body">
+        <div class="group-card__kicker">Sociedad y Ambiente</div>
+        <h3><a href="https://www.lapoliticaonline.com/amp/347601-la-central-hidroelectrica-ana-cua-tendra-un-moderno-sistema-para-preservar-migraciones-de-peces-del-parana/" target="_blank" rel="noopener">La Central Hidroeléctrica Aña Cuá tendrá un moderno sistema para preservar migraciones ...</a></h3>
+        <p>... impactos ambientales y preservar la biodiversidad de la región. Uno de ... En el caso del brazo Aña Cuá, el embalse Yacyretá opera a una cota ...</p>
+        <div class="meta">02 jun 2026 · lapoliticaonline.com</div>
+      </div>
+    </article>
       
       </div>
     </section>
 
-    <section class="group-section" id="hidroelectricidad">
+    <section class="group-section" id="transicion-energetica">
       <div class="section-title">
-        <h2>Hidroelectricidad</h2>
-        <span>274 noticias</span>
+        <h2>Transición Energética</h2>
+        <span>3 noticias</span>
+        <a class="back-home-link" href="#inicio">Volver al inicio</a>
       </div>
       <div class="group-section__grid">
         <article class="section-feature">
-          <img src="https://pxcdn.ellitoral.com.ar/litoral/062026/1781104388913.jpg?&amp;cw=1200&amp;ch=630" alt="Juan Pablo Valdés recibió al embajador de Austria con una agenda para atraer inversiones ..." loading="lazy">
+          <img src="https://infoenergia.info/images/resize/667850-1200x675.webp" alt="Autorizan dos nuevos parques solares en Corrientes que aportarán 27 MW al sistema ... - IN Salta" loading="lazy">
           <div class="section-feature__body">
-            <div class="section-feature__kicker">Hidroelectricidad</div>
-            <h3><a href="https://www.ellitoral.com.ar/actualidad/2026-6-10-12-6-0-juan-pablo-valdes-recibio-al-embajador-de-austria-con-una-agenda-para-traer-inversiones-a-corrientes" target="_blank" rel="noopener">Juan Pablo Valdés recibió al embajador de Austria con una agenda para atraer inversiones ...</a></h3>
-            <p>Tras el encuentro realizado en Casa de Gobierno, la comitiva se trasladó a las localidades de Ituzaingó y Gobernador Virasoro, donde recorrieron ...</p>
-            <div class="meta">11 jun 2026 · ellitoral.com.ar</div>
+            <div class="section-feature__kicker">Transición Energética</div>
+            <h3><a href="https://insalta.info/infoenergia/autorizan-dos-nuevos-parques-solares-en-corrientes-que-aportaran-27-mw-al-sistema-electrico-argentino-2" target="_blank" rel="noopener">Autorizan dos nuevos parques solares en Corrientes que aportarán 27 MW al sistema ... - IN Salta</a></h3>
+            <p>... energía renovable, fortaleciendo el crecimiento de la ... Dirección Provincial de Energía de Corrientes (DPEC) y la transportista Transnea.</p>
+            <div class="meta">02 jun 2026 · insalta.info</div>
           </div>
         </article>
         <ul class="headline-list">
 
         <li class="headline-list__item">
-          <a href="http://www.sietepuntasdigital.com/site/detail/19308-valdes-recibio-al-embajador-de-austria-y-mostro-el-potencial-del-desarrollo-correntino" target="_blank" rel="noopener">Valdés recibió al embajador de Austria y mostró el potencial del desarrollo correntino</a>
-          <span>10 jun 2026 · sietepuntasdigital.com</span>
+          <a href="https://www.confirmado.com.ar/vernota.asp?id_noticia=32267" target="_blank" rel="noopener">La UTA de la provincia de Corrientes se suma al paro general y este jueves no habrá ...</a>
+          <span>20 feb 2026 · confirmado.com.ar</span>
         </li>
 
         <li class="headline-list__item">
-          <a href="https://www.abc.com.py/nacionales/2026/06/10/obras-de-empedrado-financiadas-por-itaipu-generan-malestar-y-reclamos-en-ayolas/" target="_blank" rel="noopener">Ayolas: paralización de obras del Plan 1.000, financiadas por Itaipú, genera reclamos</a>
-          <span>10 jun 2026 · abc.com.py</span>
+          <a href="https://www.lt7noticias.com/76810-el-gobierno-de-corrientes-convoco-a-los-gremios-docentes-a-dias-del-inicio-del-ciclo-lectivo" target="_blank" rel="noopener">El Gobierno de Corrientes convocó a los gremios docentes a días del inicio del ciclo lectivo</a>
+          <span>17 feb 2026 · lt7noticias.com</span>
+        </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="group-section" id="bioenergia">
+      <div class="section-title">
+        <h2>Bioenergía</h2>
+        <span>73 noticias</span>
+        <a class="back-home-link" href="#inicio">Volver al inicio</a>
+      </div>
+      <div class="group-section__grid">
+        <article class="section-feature">
+          <img src="data:image/svg+xml,%0A%20%20%20%20%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201280%20720%27%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23010066%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2742%25%27%20stop-color%3D%27%230c2e8a%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2776%25%27%20stop-color%3D%27%232e6ea8%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%234d86bb%27/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%271280%27%20height%3D%27720%27%20fill%3D%27url%28%23g%29%27/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27145%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2740%27%20fill%3D%27rgba%28255%2C255%2C255%2C.82%29%27%3ENoticias%20del%20Sector%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27285%27%20font-family%3D%27Georgia%2C%20serif%27%20font-size%3D%2768%27%20fill%3D%27%23ffffff%27%3EBioenerg%C3%ADa%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27385%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2734%27%20fill%3D%27rgba%28255%2C255%2C255%2C.90%29%27%3ESIROPE%20DE%20FRESA%20400%20GR%20-%20BioEnergy%20Sport%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="SIROPE DE FRESA 400 GR - BioEnergy Sport" loading="lazy">
+          <div class="section-feature__body">
+            <div class="section-feature__kicker">Bioenergía</div>
+            <h3><a href="https://bioenergysport.com/productos/sirope-de-fresa-400-gr/" target="_blank" rel="noopener">SIROPE DE FRESA 400 GR - BioEnergy Sport</a></h3>
+            <p>SIROPE DE FRESA 400 GR · Baja en calorías y 0% en grasas · Aptos para diabéticos · Sirope endulzado a base de stevia.</p>
+            <div class="meta">08 jun 2026 · bioenergysport.com</div>
+          </div>
+        </article>
+        <ul class="headline-list">
+
+        <li class="headline-list__item">
+          <a href="https://www.ellitoral.com.ar/actualidad/2026-6-1-12-59-0-valdes-anuncio-la-primera-fabrica-de-clt-del-pais-del-bosque-correntino-a-la-construccion" target="_blank" rel="noopener">Valdés anunció la primera fábrica de CLT del país: del bosque correntino a la construcción</a>
+          <span>01 jun 2026 · ellitoral.com.ar</span>
         </li>
 
         <li class="headline-list__item">
-          <a href="https://radioinfinitagoya.com.ar/v1/2026/06/10/ituzaingo-capturaron-a-dos-narcos-con-ladrillos-cocaina-valuados-en-37-millones/" target="_blank" rel="noopener">Ituzaingó: capturaron a dos narcos con ladrillos cocaína valuados en $37 millones</a>
-          <span>10 jun 2026 · radioinfinitagoya.com.ar</span>
+          <a href="https://www.ypaithros.gr/evrokoinovoulio-i-viooikonomia-os-nea-architektoniki-gia-ti-viosimotita-tis-evropaikis-georgias/" target="_blank" rel="noopener">Ευρωκοινοβούλιο: Η βιοοικονομία ως νέα αρχιτεκτονική για τη βιωσιμότητα της ευρωπαϊκής γεωργίας</a>
+          <span>01 jun 2026 · ypaithros.gr</span>
         </li>
 
         <li class="headline-list__item">
-          <a href="https://www.holasalta.com/post/avanza-la-relocalización-de-puestos-del-mercado-san-miguel-al-predio-de-ituzaingó-134" target="_blank" rel="noopener">Avanza la relocalización de puestos del mercado San Miguel al predio de Ituzaingó 134</a>
-          <span>10 jun 2026 · holasalta.com</span>
+          <a href="https://palawan-news.com/alvarez-backs-nea-interim-board-extension/" target="_blank" rel="noopener">Alvarez backs NEA interim board extension - Palawan News</a>
+          <span>01 jun 2026 · palawan-news.com</span>
         </li>
 
         <li class="headline-list__item">
-          <a href="https://www.abc.com.py/interior/2026/06/09/profesor-aclara-situacion-de-alumno-y-lanza-colecta-para-ayudar-a-estudiantes-vulnerables-en-ayolas/" target="_blank" rel="noopener">Profesor aclara situación de alumno y lanza colecta para ayudar a estudiantes vulnerables ...</a>
-          <span>09 jun 2026 · abc.com.py</span>
+          <a href="https://risingnepaldaily.com/news/81091" target="_blank" rel="noopener">Budget 2026/27: NEA to be restructured into three separate agencies - The Rising Nepal</a>
+          <span>30 may 2026 · risingnepaldaily.com</span>
         </li>
 
         <li class="headline-list__item">
-          <a href="https://weekend.perfil.com/noticias/amp/pesca/como-funcionara-el-ascensor-para-peces-que-construyen-en-ana-cua.phtml" target="_blank" rel="noopener">Cómo funcionará el “ascensor” para peces que construyen en Aña Cuá - Weekend / Perfil</a>
-          <span>09 jun 2026 · weekend.perfil.com</span>
+          <a href="https://www.flz.de/internationaler-biogas-spezialist-so-will-aprovis-am-standort-weidenbach-wachsen/cnt-id-ps-fcf04c10-c117-4b55-a01c-602f2a918802" target="_blank" rel="noopener">Internationaler Biogas-Spezialist: So will Aprovis am Standort Weidenbach wachsen</a>
+          <span>27 may 2026 · flz.de</span>
         </li>
 
         <li class="headline-list__item">
-          <a href="https://www.abc.com.py/economia/2026/06/09/pescadores-insisten-en-dialogar-con-el-titular-de-yacyreta-para-reclamar/" target="_blank" rel="noopener">Pescadores insisten en dialogar con el titular de Yacyretá para reclamar - ABC Color</a>
-          <span>09 jun 2026 · abc.com.py</span>
+          <a href="https://nit.com.au/26-05-2026/24472/png-renewable-energy-deal-targets-climate-finance-gap" target="_blank" rel="noopener">PNG renewable energy deal targets climate finance gap - National Indigenous Times</a>
+          <span>26 may 2026 · nit.com.au</span>
         </li>
 
         <li class="headline-list__item">
-          <a href="https://primerplanoonline.com.ar/epidemia-silenciosa-se-ahorco-un-joven-en-su-casa-de-moron-y-suman-208-los-suicidios-en-el-ano/" target="_blank" rel="noopener">Epidemia silenciosa: suicidios triplican homicidios dolosos - Primer Plano Online</a>
-          <span>09 jun 2026 · primerplanoonline.com.ar</span>
+          <a href="https://novaciencia.es/la-unia-analiza-en-una-microcredencial-el-potencial-del-biogas-y-los-gases-renovables/" target="_blank" rel="noopener">La UNIA analiza en una microcredencial el potencial del biogás y los gases renovables</a>
+          <span>25 may 2026 · novaciencia.es</span>
+        </li>
+
+        <li class="headline-list__item">
+          <a href="https://noticiasambientales.com/sustainability/a-new-resource-from-waste-the-circular-bioeconomy-as-a-driver-of-innovation-and-sustainability/amp/" target="_blank" rel="noopener">A new resource from waste: the circular bioeconomy as a driver of innovation and sustainability</a>
+          <span>25 may 2026 · noticiasambientales.com</span>
+        </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="group-section" id="bonos-de-carbono">
+      <div class="section-title">
+        <h2>Bonos de Carbono</h2>
+        <span>32 noticias</span>
+        <a class="back-home-link" href="#inicio">Volver al inicio</a>
+      </div>
+      <div class="group-section__grid">
+        <article class="section-feature">
+          <img src="data:image/svg+xml,%0A%20%20%20%20%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201280%20720%27%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23010066%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2742%25%27%20stop-color%3D%27%230c2e8a%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2776%25%27%20stop-color%3D%27%232e6ea8%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%234d86bb%27/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%271280%27%20height%3D%27720%27%20fill%3D%27url%28%23g%29%27/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27145%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2740%27%20fill%3D%27rgba%28255%2C255%2C255%2C.82%29%27%3ENoticias%20del%20Sector%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27285%27%20font-family%3D%27Georgia%2C%20serif%27%20font-size%3D%2768%27%20fill%3D%27%23ffffff%27%3EBonos%20de%20Carbono%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27385%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2734%27%20fill%3D%27rgba%28255%2C255%2C255%2C.90%29%27%3EBonos%20verdes%20y%20producci%C3%B3n%20sustentable%3A%20%26quot%3BCorrientes%20puede%20cobrar%E2%80%A6%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="Bonos verdes y producción sustentable: &amp;quot;Corrientes puede cobrar por limpiar el aire del mundo&amp;quot;" loading="lazy">
+          <div class="section-feature__body">
+            <div class="section-feature__kicker">Bonos de Carbono</div>
+            <h3><a href="https://www.noticiero9.com.ar/27004-bonos-verdes-y-produccion-sustentable-corrientes-puede-cobrar-por-limpiar-el-aire-del-mundo" target="_blank" rel="noopener">Bonos verdes y producción sustentable: &amp;quot;Corrientes puede cobrar por limpiar el aire del mundo&amp;quot;</a></h3>
+            <p>La discusión por los bonos verdes, los bonos de carbono y la ... provincia de Corrientes&quot;. El productor sostuvo que Corrientes ya cuenta ...</p>
+            <div class="meta">09 jun 2026 · noticiero9.com.ar</div>
+          </div>
+        </article>
+        <ul class="headline-list">
+
+        <li class="headline-list__item">
+          <a href="https://www.lt7noticias.com/78776-dia-mundial-del-medio-ambiente-ibera-simbolo-de-conservacion-y-desarrollo-para-corrientes" target="_blank" rel="noopener">Día Mundial del Medio Ambiente: Iberá, símbolo de conservación y desarrollo para Corrientes</a>
+          <span>06 jun 2026 · lt7noticias.com</span>
+        </li>
+
+        <li class="headline-list__item">
+          <a href="https://www.juscorrientes.gov.ar/prensa/el-poder-judicial-de-corrientes-consolida-su-gestion-ambiental-en-el-dia-mundial-del-ambiente/" target="_blank" rel="noopener">En el marco del Día Mundial del Ambiente, el Poder Judicial de la Provincia de Corrientes ...</a>
+          <span>05 jun 2026 · juscorrientes.gov.ar</span>
+        </li>
+
+        <li class="headline-list__item">
+          <a href="https://www.manifoldtimes.com/news/stormgeo-and-oceanscore-link-emissions-data-compliance-workflows/" target="_blank" rel="noopener">StormGeo and OceanScore link emissions data, compliance workflows - Manifold Times</a>
+          <span>04 jun 2026 · manifoldtimes.com</span>
+        </li>
+
+        <li class="headline-list__item">
+          <a href="https://www.momarandu.com/notix/noticia/66063_las-transferencias-automticas-nacionales-a-corrientes-crecieron-84-en-mayo.htm" target="_blank" rel="noopener">Las transferencias automáticas nacionales a Corrientes crecieron 8,4% en mayo</a>
+          <span>02 jun 2026 · momarandu.com</span>
+        </li>
+
+        <li class="headline-list__item">
+          <a href="https://espanol.cgtn.com/news/2026-05-27/2059465908888375298/index.html" target="_blank" rel="noopener">Argentina completa el registro internacional de su primer proyecto de carbono en pastizales ...</a>
+          <span>27 may 2026 · espanol.cgtn.com</span>
+        </li>
+
+        <li class="headline-list__item">
+          <a href="https://www.confirmado.com.ar/movil/vernota.asp?id_noticia=33343" target="_blank" rel="noopener">El Gobierno deja de cubrir los pasajes gratuitos a personas con discapacidad y niños con cáncer</a>
+          <span>27 may 2026 · confirmado.com.ar</span>
+        </li>
+
+        <li class="headline-list__item">
+          <a href="https://www.radiodos.com.ar/208672-el-estado-ya-no-pagara-pasajes-en-micros-de-larga-distancia-a-ninos-con-cancer-discapacitados-y-trasplantados" target="_blank" rel="noopener">El Estado ya no pagará pasajes en micros de larga distancia a niños con cáncer ...</a>
+          <span>27 may 2026 · radiodos.com.ar</span>
+        </li>
+
+        <li class="headline-list__item">
+          <a href="https://www.lt7noticias.com/78571-el-gobierno-elimino-las-compensaciones-a-las-empresas-de-transporte-por-los-pasajes-gratuitos-para-discapacitados" target="_blank" rel="noopener">El Gobierno eliminó las compensaciones a las empresas de transporte por los pasajes ...</a>
+          <span>26 may 2026 · lt7noticias.com</span>
+        </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="group-section" id="caudales-sequias">
+      <div class="section-title">
+        <h2>Caudales / Sequías</h2>
+        <span>98 noticias</span>
+        <a class="back-home-link" href="#inicio">Volver al inicio</a>
+      </div>
+      <div class="group-section__grid">
+        <article class="section-feature">
+          <img src="data:image/svg+xml,%0A%20%20%20%20%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201280%20720%27%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23010066%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2742%25%27%20stop-color%3D%27%230c2e8a%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2776%25%27%20stop-color%3D%27%232e6ea8%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%234d86bb%27/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%271280%27%20height%3D%27720%27%20fill%3D%27url%28%23g%29%27/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27145%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2740%27%20fill%3D%27rgba%28255%2C255%2C255%2C.82%29%27%3ENoticias%20del%20Sector%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27285%27%20font-family%3D%27Georgia%2C%20serif%27%20font-size%3D%2768%27%20fill%3D%27%23ffffff%27%3ECaudales%20/%20Sequ%C3%ADas%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27385%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2734%27%20fill%3D%27rgba%28255%2C255%2C255%2C.90%29%27%3EEl%20Ni%C3%B1o%20ya%20tiene%20fecha%3A%20Se%20confirmar%C3%ADa%20entre%20julio%20y%20agosto%20y%20s%E2%80%A6%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="El Niño ya tiene fecha: Se confirmaría entre julio y agosto y sería muy fuerte hacia fin de año" loading="lazy">
+          <div class="section-feature__body">
+            <div class="section-feature__kicker">Caudales / Sequías</div>
+            <h3><a href="https://elecodesunchales.com.ar/contenido/143551/el-nino-ya-tiene-fecha-se-confirmaria-entre-julio-y-agosto-y-seria-muy-fuerte-ha" target="_blank" rel="noopener">El Niño ya tiene fecha: Se confirmaría entre julio y agosto y sería muy fuerte hacia fin de año</a></h3>
+            <p>El Niño ya tiene fecha: Se confirmaría entre ... Aquel año estuvo marcado por precipitaciones abundantes y una importante crecida del río Paraná.</p>
+            <div class="meta">09 jun 2026 · elecodesunchales.com.ar</div>
+          </div>
+        </article>
+        <ul class="headline-list">
+
+        <li class="headline-list__item">
+          <a href="https://www.sol915.com.ar/el-puente-colgante-de-santa-fe-cumple-98-anos-la-historia-del-simbolo-mas-emblematico-de-la-ciudad/" target="_blank" rel="noopener">El Puente Colgante de Santa Fe cumple 98 años: la historia del símbolo más emblemático ...</a>
+          <span>09 jun 2026 · sol915.com.ar</span>
+        </li>
+
+        <li class="headline-list__item">
+          <a href="https://dredgewire.com/argentina-retains-belgian-dredging-giant-deme-for-critical-parana-river-waterway/" target="_blank" rel="noopener">Argentina Retains Belgian Dredging Giant DEME for Critical Paraná River Waterway</a>
+          <span>09 jun 2026 · dredgewire.com</span>
+        </li>
+
+        <li class="headline-list__item">
+          <a href="https://www.luxtimes.lu/businessandfinance/capellen-based-jan-de-nul-wins-8.7bn-deal-to-deepen-argentinas-parana-river-lifeline/156135222.html" target="_blank" rel="noopener">Capellen-based Jan De Nul wins €8.7bn deal to deepen Argentina&#x27;s Paraná River lifeline</a>
+          <span>08 jun 2026 · luxtimes.lu</span>
+        </li>
+
+        <li class="headline-list__item">
+          <a href="https://en.clickpetroleoegas.com.br/argentina-confirms-belgian-giant-to-lead-strategic-parana-river-waterway-and-promises-to-reduce-logistical-costs-on-one-of-south-americas-mo-gstts/" target="_blank" rel="noopener">Argentina confirms Belgian giant to lead strategic Paraná River waterway and promises to ...</a>
+          <span>08 jun 2026 · en.clickpetroleoegas.com.br</span>
+        </li>
+
+        <li class="headline-list__item">
+          <a href="https://www.impactocorrientes.com/notix/noticia/244224/la_omm_advierte_que_el_niño_tiene_un_80_de_probabilidad_de_instalarse_este_invierno.htm" target="_blank" rel="noopener">La OMM advierte que El Niño tiene un 80% de probabilidad de instalarse este invierno</a>
+          <span>05 jun 2026 · impactocorrientes.com</span>
+        </li>
+
+        <li class="headline-list__item">
+          <a href="https://www.infobae.com/sociedad/2026/06/04/reactivaron-la-causa-por-la-contaminacion-del-rio-parana-y-ordenaron-indagar-a-funcionarios-y-directivos-de-una-empresa/" target="_blank" rel="noopener">Reactivaron la causa por la contaminación del río Paraná y ordenaron indagar a ... - Infobae</a>
+          <span>04 jun 2026 · infobae.com</span>
+        </li>
+
+        <li class="headline-list__item">
+          <a href="https://www.abc.com.py/interior/2026/06/03/pescadores-comerciales-tendran-mas-tiempo-para-ponerse-al-dia-con-sus-licencias/" target="_blank" rel="noopener">Pescadores comerciales tendrán más tiempo para ponerse al día con sus licencias - Interior</a>
+          <span>03 jun 2026 · abc.com.py</span>
+        </li>
+
+        <li class="headline-list__item">
+          <a href="https://www.elonce.com/amp/el-nino-gana-fuerza-alertan-por-mas-lluvias-y-posibles-crecidas-hacia-fin-de-ano.htm" target="_blank" rel="noopener">El Niño gana fuerza: alertan por más lluvias y posibles crecidas de los ríos Paraná y Uruguay</a>
+          <span>03 jun 2026 · elonce.com</span>
+        </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="group-section" id="emisiones-y-carbono">
+      <div class="section-title">
+        <h2>Emisiones y Carbono</h2>
+        <span>2 noticias</span>
+        <a class="back-home-link" href="#inicio">Volver al inicio</a>
+      </div>
+      <div class="group-section__grid">
+        <article class="section-feature">
+          <img src="https://www.corrientespositiva.com.ar/notix/multimedia/imagenes/fotos/2026-06-10/235992.jpg" alt="El Gobierno de Corrientes activa un plan preventivo ante la llegada del &amp;quot;Superniño&amp;quot;" loading="lazy">
+          <div class="section-feature__body">
+            <div class="section-feature__kicker">Emisiones y Carbono</div>
+            <h3><a href="https://www.corrientespositiva.com.ar/notix/noticia/68457/el-gobierno-de-corrientes-activa-un-plan-preventivo-ante-la-llegada-del-supernio.htm" target="_blank" rel="noopener">El Gobierno de Corrientes activa un plan preventivo ante la llegada del &amp;quot;Superniño&amp;quot;</a></h3>
+            <p>El Gobierno de Corrientes activa un plan preventivo ante la llegada del &quot;Superniño&quot; ... Además, se prevé la ejecución de obras puntuales de mitigación ...</p>
+            <div class="meta">10 jun 2026 · corrientespositiva.com.ar</div>
+          </div>
+        </article>
+        <ul class="headline-list">
+
+        <li class="headline-list__item">
+          <a href="https://www.ellitoral.com.ar/actualidad/2026-5-20-10-3-0-traspaso-de-tierras-a-corrientes-juan-pablo-valdes-viaja-para-reunirse-con-diego-santilli" target="_blank" rel="noopener">Traspaso de tierras a Corrientes: Juan Pablo Valdés viaja para reunirse con Diego Santilli</a>
+          <span>22 may 2026 · ellitoral.com.ar</span>
         </li>
         </ul>
       </div>
@@ -854,6 +1087,7 @@ main { padding: 28px 0 56px; }
       <div class="section-title">
         <h2>Generación Eléctrica</h2>
         <span>211 noticias</span>
+        <a class="back-home-link" href="#inicio">Volver al inicio</a>
       </div>
       <div class="group-section__grid">
         <article class="section-feature">
@@ -910,26 +1144,123 @@ main { padding: 28px 0 56px; }
       </div>
     </section>
 
-    <section class="group-section" id="emisiones-y-carbono">
+    <section class="group-section" id="hidroelectricidad">
       <div class="section-title">
-        <h2>Emisiones y Carbono</h2>
-        <span>2 noticias</span>
+        <h2>Hidroelectricidad</h2>
+        <span>274 noticias</span>
+        <a class="back-home-link" href="#inicio">Volver al inicio</a>
       </div>
       <div class="group-section__grid">
         <article class="section-feature">
-          <img src="https://www.corrientespositiva.com.ar/notix/multimedia/imagenes/fotos/2026-06-10/235992.jpg" alt="El Gobierno de Corrientes activa un plan preventivo ante la llegada del &amp;quot;Superniño&amp;quot;" loading="lazy">
+          <img src="https://pxcdn.ellitoral.com.ar/litoral/062026/1781104388913.jpg?&amp;cw=1200&amp;ch=630" alt="Juan Pablo Valdés recibió al embajador de Austria con una agenda para atraer inversiones ..." loading="lazy">
           <div class="section-feature__body">
-            <div class="section-feature__kicker">Emisiones y Carbono</div>
-            <h3><a href="https://www.corrientespositiva.com.ar/notix/noticia/68457/el-gobierno-de-corrientes-activa-un-plan-preventivo-ante-la-llegada-del-supernio.htm" target="_blank" rel="noopener">El Gobierno de Corrientes activa un plan preventivo ante la llegada del &amp;quot;Superniño&amp;quot;</a></h3>
-            <p>El Gobierno de Corrientes activa un plan preventivo ante la llegada del &quot;Superniño&quot; ... Además, se prevé la ejecución de obras puntuales de mitigación ...</p>
-            <div class="meta">10 jun 2026 · corrientespositiva.com.ar</div>
+            <div class="section-feature__kicker">Hidroelectricidad</div>
+            <h3><a href="https://www.ellitoral.com.ar/actualidad/2026-6-10-12-6-0-juan-pablo-valdes-recibio-al-embajador-de-austria-con-una-agenda-para-traer-inversiones-a-corrientes" target="_blank" rel="noopener">Juan Pablo Valdés recibió al embajador de Austria con una agenda para atraer inversiones ...</a></h3>
+            <p>Tras el encuentro realizado en Casa de Gobierno, la comitiva se trasladó a las localidades de Ituzaingó y Gobernador Virasoro, donde recorrieron ...</p>
+            <div class="meta">11 jun 2026 · ellitoral.com.ar</div>
           </div>
         </article>
         <ul class="headline-list">
 
         <li class="headline-list__item">
-          <a href="https://www.ellitoral.com.ar/actualidad/2026-5-20-10-3-0-traspaso-de-tierras-a-corrientes-juan-pablo-valdes-viaja-para-reunirse-con-diego-santilli" target="_blank" rel="noopener">Traspaso de tierras a Corrientes: Juan Pablo Valdés viaja para reunirse con Diego Santilli</a>
-          <span>22 may 2026 · ellitoral.com.ar</span>
+          <a href="http://www.sietepuntasdigital.com/site/detail/19308-valdes-recibio-al-embajador-de-austria-y-mostro-el-potencial-del-desarrollo-correntino" target="_blank" rel="noopener">Valdés recibió al embajador de Austria y mostró el potencial del desarrollo correntino</a>
+          <span>10 jun 2026 · sietepuntasdigital.com</span>
+        </li>
+
+        <li class="headline-list__item">
+          <a href="https://www.abc.com.py/nacionales/2026/06/10/obras-de-empedrado-financiadas-por-itaipu-generan-malestar-y-reclamos-en-ayolas/" target="_blank" rel="noopener">Ayolas: paralización de obras del Plan 1.000, financiadas por Itaipú, genera reclamos</a>
+          <span>10 jun 2026 · abc.com.py</span>
+        </li>
+
+        <li class="headline-list__item">
+          <a href="https://radioinfinitagoya.com.ar/v1/2026/06/10/ituzaingo-capturaron-a-dos-narcos-con-ladrillos-cocaina-valuados-en-37-millones/" target="_blank" rel="noopener">Ituzaingó: capturaron a dos narcos con ladrillos cocaína valuados en $37 millones</a>
+          <span>10 jun 2026 · radioinfinitagoya.com.ar</span>
+        </li>
+
+        <li class="headline-list__item">
+          <a href="https://www.holasalta.com/post/avanza-la-relocalización-de-puestos-del-mercado-san-miguel-al-predio-de-ituzaingó-134" target="_blank" rel="noopener">Avanza la relocalización de puestos del mercado San Miguel al predio de Ituzaingó 134</a>
+          <span>10 jun 2026 · holasalta.com</span>
+        </li>
+
+        <li class="headline-list__item">
+          <a href="https://www.abc.com.py/interior/2026/06/09/profesor-aclara-situacion-de-alumno-y-lanza-colecta-para-ayudar-a-estudiantes-vulnerables-en-ayolas/" target="_blank" rel="noopener">Profesor aclara situación de alumno y lanza colecta para ayudar a estudiantes vulnerables ...</a>
+          <span>09 jun 2026 · abc.com.py</span>
+        </li>
+
+        <li class="headline-list__item">
+          <a href="https://weekend.perfil.com/noticias/amp/pesca/como-funcionara-el-ascensor-para-peces-que-construyen-en-ana-cua.phtml" target="_blank" rel="noopener">Cómo funcionará el “ascensor” para peces que construyen en Aña Cuá - Weekend / Perfil</a>
+          <span>09 jun 2026 · weekend.perfil.com</span>
+        </li>
+
+        <li class="headline-list__item">
+          <a href="https://www.abc.com.py/economia/2026/06/09/pescadores-insisten-en-dialogar-con-el-titular-de-yacyreta-para-reclamar/" target="_blank" rel="noopener">Pescadores insisten en dialogar con el titular de Yacyretá para reclamar - ABC Color</a>
+          <span>09 jun 2026 · abc.com.py</span>
+        </li>
+
+        <li class="headline-list__item">
+          <a href="https://primerplanoonline.com.ar/epidemia-silenciosa-se-ahorco-un-joven-en-su-casa-de-moron-y-suman-208-los-suicidios-en-el-ano/" target="_blank" rel="noopener">Epidemia silenciosa: suicidios triplican homicidios dolosos - Primer Plano Online</a>
+          <span>09 jun 2026 · primerplanoonline.com.ar</span>
+        </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="group-section" id="hidrogeno-combustibles">
+      <div class="section-title">
+        <h2>Hidrógeno / Combustibles</h2>
+        <span>42 noticias</span>
+        <a class="back-home-link" href="#inicio">Volver al inicio</a>
+      </div>
+      <div class="group-section__grid">
+        <article class="section-feature">
+          <img src="data:image/svg+xml,%0A%20%20%20%20%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201280%20720%27%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23010066%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2742%25%27%20stop-color%3D%27%230c2e8a%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2776%25%27%20stop-color%3D%27%232e6ea8%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%234d86bb%27/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%271280%27%20height%3D%27720%27%20fill%3D%27url%28%23g%29%27/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27145%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2740%27%20fill%3D%27rgba%28255%2C255%2C255%2C.82%29%27%3ENoticias%20del%20Sector%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27285%27%20font-family%3D%27Georgia%2C%20serif%27%20font-size%3D%2768%27%20fill%3D%27%23ffffff%27%3EHidr%C3%B3geno%20/%20Combustibles%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27385%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2734%27%20fill%3D%27rgba%28255%2C255%2C255%2C.90%29%27%3EEn%20Argentina%2C%20dos%20parques%20fotovoltaicos%20que%20suman%2025%20MW%20solicit%E2%80%A6%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="En Argentina, dos parques fotovoltaicos que suman 25 MW solicitan capacidad de transporte" loading="lazy">
+          <div class="section-feature__body">
+            <div class="section-feature__kicker">Hidrógeno / Combustibles</div>
+            <h3><a href="https://www.pv-magazine-latam.com/2026/06/03/en-argentina-dos-parques-fotovoltaicos-que-suman-25-mw-solicitan-capacidad-de-transporte/" target="_blank" rel="noopener">En Argentina, dos parques fotovoltaicos que suman 25 MW solicitan capacidad de transporte</a></h3>
+            <p>... provincia de Corrientes, por Industrias Juan F. Secco ... Hidrógeno · Seguidores / Sistemas de montaje · Software · Electromovilidad · Plug &amp; Play ...</p>
+            <div class="meta">04 jun 2026 · pv-magazine-latam.com</div>
+          </div>
+        </article>
+        <ul class="headline-list">
+
+        <li class="headline-list__item">
+          <a href="https://cadenalaser.com/2026/06/03/un-ex-diputado-le-ofrecio-trabajo-para-abusar-de-ella-la-pesadilla-que-duro-24-dias-y-termino-en-una-condena/" target="_blank" rel="noopener">Un ex diputado le ofreció trabajo para abusar de ella: la pesadilla que duró 24 días y ...</a>
+          <span>03 jun 2026 · cadenalaser.com</span>
+        </li>
+
+        <li class="headline-list__item">
+          <a href="https://azscore.com.br/football/game/com-vida-saf-u20-ec-pelotas-u20-2026-05-31" target="_blank" rel="noopener">Com Vida Saf U20 vs Pelotas U20 31/05/2026 hoje - Azscore</a>
+          <span>31 may 2026 · azscore.com.br</span>
+        </li>
+
+        <li class="headline-list__item">
+          <a href="https://www.diarioellibertador.com.ar/modernizacion-legislativa-debatieron-el-futuro-de-la-ia-en-la-gestion-publica/" target="_blank" rel="noopener">Modernización legislativa: debatieron el desafío de la IA en la gestión pública</a>
+          <span>23 may 2026 · diarioellibertador.com.ar</span>
+        </li>
+
+        <li class="headline-list__item">
+          <a href="https://infogoya.com/el-riesgo-pais-se-acerca-a-los-500-puntos-y-avanzan-las-acciones-energeticas/" target="_blank" rel="noopener">El riesgo país se acerca a los 500 puntos y avanzan las acciones energéticas - infogoya.com</a>
+          <span>22 may 2026 · infogoya.com</span>
+        </li>
+
+        <li class="headline-list__item">
+          <a href="https://pix11.com/news/monica-makes-it-happen/goya-giveaways-nj-devils-wonder-girls-wheel-of-giving-winner-monica-makes-it-happen/" target="_blank" rel="noopener">Goya Giveaways: NJ Devils, Wonder Girls, &amp;amp; Wheel of Giving Winner | Monica Makes It Happen</a>
+          <span>21 may 2026 · pix11.com</span>
+        </li>
+
+        <li class="headline-list__item">
+          <a href="http://www.sietepuntasdigital.com/site/detail/19130-tras-14-anos-despidieron-a-dos-trabajadoras-del-smn-en-paso-de-los-libres" target="_blank" rel="noopener">Tras 14 años, despidieron a dos trabajadoras del SMN en Paso de los Libres</a>
+          <span>20 may 2026 · sietepuntasdigital.com</span>
+        </li>
+
+        <li class="headline-list__item">
+          <a href="https://noticiasambientales.com/sustentabilidade/cordoba-impulsiona-um-polo-bioenergetico-pioneiro-em-villa-maria-que-convertera-oleo-usado-em-biodiesel-sustentavel/amp/" target="_blank" rel="noopener">Córdoba impulsiona um polo bioenergético pioneiro em Villa María que converterá óleo ...</a>
+          <span>19 may 2026 · noticiasambientales.com</span>
+        </li>
+
+        <li class="headline-list__item">
+          <a href="https://www.agrositio.com.ar/noticia/198813-micro-agropecuario-es-oficial-el-gobierno-permitira-una-ampliacion-del-corte-del-gasoil-con-biodiesel.html" target="_blank" rel="noopener">Es oficial: el gobierno permitirá una ampliación del corte del gasoil con biodiesel - Agrositio</a>
+          <span>19 may 2026 · agrositio.com.ar</span>
         </li>
         </ul>
       </div>
@@ -939,6 +1270,7 @@ main { padding: 28px 0 56px; }
       <div class="section-title">
         <h2>Infraestructura hídrica</h2>
         <span>36 noticias</span>
+        <a class="back-home-link" href="#inicio">Volver al inicio</a>
       </div>
       <div class="group-section__grid">
         <article class="section-feature">
@@ -999,6 +1331,7 @@ main { padding: 28px 0 56px; }
       <div class="section-title">
         <h2>Marco Legal (fuentes)</h2>
         <span>100 noticias</span>
+        <a class="back-home-link" href="#inicio">Volver al inicio</a>
       </div>
       <div class="group-section__grid">
         <article class="section-feature">
@@ -1055,70 +1388,11 @@ main { padding: 28px 0 56px; }
       </div>
     </section>
 
-    <section class="group-section" id="bonos-de-carbono">
-      <div class="section-title">
-        <h2>Bonos de Carbono</h2>
-        <span>32 noticias</span>
-      </div>
-      <div class="group-section__grid">
-        <article class="section-feature">
-          <img src="data:image/svg+xml,%0A%20%20%20%20%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201280%20720%27%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23010066%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2742%25%27%20stop-color%3D%27%230c2e8a%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2776%25%27%20stop-color%3D%27%232e6ea8%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%234d86bb%27/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%271280%27%20height%3D%27720%27%20fill%3D%27url%28%23g%29%27/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27145%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2740%27%20fill%3D%27rgba%28255%2C255%2C255%2C.82%29%27%3ENoticias%20del%20Sector%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27285%27%20font-family%3D%27Georgia%2C%20serif%27%20font-size%3D%2768%27%20fill%3D%27%23ffffff%27%3EBonos%20de%20Carbono%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27385%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2734%27%20fill%3D%27rgba%28255%2C255%2C255%2C.90%29%27%3EBonos%20verdes%20y%20producci%C3%B3n%20sustentable%3A%20%26quot%3BCorrientes%20puede%20cobrar%E2%80%A6%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="Bonos verdes y producción sustentable: &amp;quot;Corrientes puede cobrar por limpiar el aire del mundo&amp;quot;" loading="lazy">
-          <div class="section-feature__body">
-            <div class="section-feature__kicker">Bonos de Carbono</div>
-            <h3><a href="https://www.noticiero9.com.ar/27004-bonos-verdes-y-produccion-sustentable-corrientes-puede-cobrar-por-limpiar-el-aire-del-mundo" target="_blank" rel="noopener">Bonos verdes y producción sustentable: &amp;quot;Corrientes puede cobrar por limpiar el aire del mundo&amp;quot;</a></h3>
-            <p>La discusión por los bonos verdes, los bonos de carbono y la ... provincia de Corrientes&quot;. El productor sostuvo que Corrientes ya cuenta ...</p>
-            <div class="meta">09 jun 2026 · noticiero9.com.ar</div>
-          </div>
-        </article>
-        <ul class="headline-list">
-
-        <li class="headline-list__item">
-          <a href="https://www.lt7noticias.com/78776-dia-mundial-del-medio-ambiente-ibera-simbolo-de-conservacion-y-desarrollo-para-corrientes" target="_blank" rel="noopener">Día Mundial del Medio Ambiente: Iberá, símbolo de conservación y desarrollo para Corrientes</a>
-          <span>06 jun 2026 · lt7noticias.com</span>
-        </li>
-
-        <li class="headline-list__item">
-          <a href="https://www.juscorrientes.gov.ar/prensa/el-poder-judicial-de-corrientes-consolida-su-gestion-ambiental-en-el-dia-mundial-del-ambiente/" target="_blank" rel="noopener">En el marco del Día Mundial del Ambiente, el Poder Judicial de la Provincia de Corrientes ...</a>
-          <span>05 jun 2026 · juscorrientes.gov.ar</span>
-        </li>
-
-        <li class="headline-list__item">
-          <a href="https://www.manifoldtimes.com/news/stormgeo-and-oceanscore-link-emissions-data-compliance-workflows/" target="_blank" rel="noopener">StormGeo and OceanScore link emissions data, compliance workflows - Manifold Times</a>
-          <span>04 jun 2026 · manifoldtimes.com</span>
-        </li>
-
-        <li class="headline-list__item">
-          <a href="https://www.momarandu.com/notix/noticia/66063_las-transferencias-automticas-nacionales-a-corrientes-crecieron-84-en-mayo.htm" target="_blank" rel="noopener">Las transferencias automáticas nacionales a Corrientes crecieron 8,4% en mayo</a>
-          <span>02 jun 2026 · momarandu.com</span>
-        </li>
-
-        <li class="headline-list__item">
-          <a href="https://espanol.cgtn.com/news/2026-05-27/2059465908888375298/index.html" target="_blank" rel="noopener">Argentina completa el registro internacional de su primer proyecto de carbono en pastizales ...</a>
-          <span>27 may 2026 · espanol.cgtn.com</span>
-        </li>
-
-        <li class="headline-list__item">
-          <a href="https://www.confirmado.com.ar/movil/vernota.asp?id_noticia=33343" target="_blank" rel="noopener">El Gobierno deja de cubrir los pasajes gratuitos a personas con discapacidad y niños con cáncer</a>
-          <span>27 may 2026 · confirmado.com.ar</span>
-        </li>
-
-        <li class="headline-list__item">
-          <a href="https://www.radiodos.com.ar/208672-el-estado-ya-no-pagara-pasajes-en-micros-de-larga-distancia-a-ninos-con-cancer-discapacitados-y-trasplantados" target="_blank" rel="noopener">El Estado ya no pagará pasajes en micros de larga distancia a niños con cáncer ...</a>
-          <span>27 may 2026 · radiodos.com.ar</span>
-        </li>
-
-        <li class="headline-list__item">
-          <a href="https://www.lt7noticias.com/78571-el-gobierno-elimino-las-compensaciones-a-las-empresas-de-transporte-por-los-pasajes-gratuitos-para-discapacitados" target="_blank" rel="noopener">El Gobierno eliminó las compensaciones a las empresas de transporte por los pasajes ...</a>
-          <span>26 may 2026 · lt7noticias.com</span>
-        </li>
-        </ul>
-      </div>
-    </section>
-
     <section class="group-section" id="recursos-hidricos">
       <div class="section-title">
         <h2>Recursos Hídricos</h2>
         <span>15 noticias</span>
+        <a class="back-home-link" href="#inicio">Volver al inicio</a>
       </div>
       <div class="group-section__grid">
         <article class="section-feature">
@@ -1175,280 +1449,11 @@ main { padding: 28px 0 56px; }
       </div>
     </section>
 
-    <section class="group-section" id="caudales-sequias">
-      <div class="section-title">
-        <h2>Caudales / Sequías</h2>
-        <span>98 noticias</span>
-      </div>
-      <div class="group-section__grid">
-        <article class="section-feature">
-          <img src="data:image/svg+xml,%0A%20%20%20%20%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201280%20720%27%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23010066%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2742%25%27%20stop-color%3D%27%230c2e8a%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2776%25%27%20stop-color%3D%27%232e6ea8%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%234d86bb%27/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%271280%27%20height%3D%27720%27%20fill%3D%27url%28%23g%29%27/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27145%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2740%27%20fill%3D%27rgba%28255%2C255%2C255%2C.82%29%27%3ENoticias%20del%20Sector%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27285%27%20font-family%3D%27Georgia%2C%20serif%27%20font-size%3D%2768%27%20fill%3D%27%23ffffff%27%3ECaudales%20/%20Sequ%C3%ADas%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27385%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2734%27%20fill%3D%27rgba%28255%2C255%2C255%2C.90%29%27%3EEl%20Ni%C3%B1o%20ya%20tiene%20fecha%3A%20Se%20confirmar%C3%ADa%20entre%20julio%20y%20agosto%20y%20s%E2%80%A6%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="El Niño ya tiene fecha: Se confirmaría entre julio y agosto y sería muy fuerte hacia fin de año" loading="lazy">
-          <div class="section-feature__body">
-            <div class="section-feature__kicker">Caudales / Sequías</div>
-            <h3><a href="https://elecodesunchales.com.ar/contenido/143551/el-nino-ya-tiene-fecha-se-confirmaria-entre-julio-y-agosto-y-seria-muy-fuerte-ha" target="_blank" rel="noopener">El Niño ya tiene fecha: Se confirmaría entre julio y agosto y sería muy fuerte hacia fin de año</a></h3>
-            <p>El Niño ya tiene fecha: Se confirmaría entre ... Aquel año estuvo marcado por precipitaciones abundantes y una importante crecida del río Paraná.</p>
-            <div class="meta">09 jun 2026 · elecodesunchales.com.ar</div>
-          </div>
-        </article>
-        <ul class="headline-list">
-
-        <li class="headline-list__item">
-          <a href="https://www.sol915.com.ar/el-puente-colgante-de-santa-fe-cumple-98-anos-la-historia-del-simbolo-mas-emblematico-de-la-ciudad/" target="_blank" rel="noopener">El Puente Colgante de Santa Fe cumple 98 años: la historia del símbolo más emblemático ...</a>
-          <span>09 jun 2026 · sol915.com.ar</span>
-        </li>
-
-        <li class="headline-list__item">
-          <a href="https://dredgewire.com/argentina-retains-belgian-dredging-giant-deme-for-critical-parana-river-waterway/" target="_blank" rel="noopener">Argentina Retains Belgian Dredging Giant DEME for Critical Paraná River Waterway</a>
-          <span>09 jun 2026 · dredgewire.com</span>
-        </li>
-
-        <li class="headline-list__item">
-          <a href="https://www.luxtimes.lu/businessandfinance/capellen-based-jan-de-nul-wins-8.7bn-deal-to-deepen-argentinas-parana-river-lifeline/156135222.html" target="_blank" rel="noopener">Capellen-based Jan De Nul wins €8.7bn deal to deepen Argentina&#x27;s Paraná River lifeline</a>
-          <span>08 jun 2026 · luxtimes.lu</span>
-        </li>
-
-        <li class="headline-list__item">
-          <a href="https://en.clickpetroleoegas.com.br/argentina-confirms-belgian-giant-to-lead-strategic-parana-river-waterway-and-promises-to-reduce-logistical-costs-on-one-of-south-americas-mo-gstts/" target="_blank" rel="noopener">Argentina confirms Belgian giant to lead strategic Paraná River waterway and promises to ...</a>
-          <span>08 jun 2026 · en.clickpetroleoegas.com.br</span>
-        </li>
-
-        <li class="headline-list__item">
-          <a href="https://www.impactocorrientes.com/notix/noticia/244224/la_omm_advierte_que_el_niño_tiene_un_80_de_probabilidad_de_instalarse_este_invierno.htm" target="_blank" rel="noopener">La OMM advierte que El Niño tiene un 80% de probabilidad de instalarse este invierno</a>
-          <span>05 jun 2026 · impactocorrientes.com</span>
-        </li>
-
-        <li class="headline-list__item">
-          <a href="https://www.infobae.com/sociedad/2026/06/04/reactivaron-la-causa-por-la-contaminacion-del-rio-parana-y-ordenaron-indagar-a-funcionarios-y-directivos-de-una-empresa/" target="_blank" rel="noopener">Reactivaron la causa por la contaminación del río Paraná y ordenaron indagar a ... - Infobae</a>
-          <span>04 jun 2026 · infobae.com</span>
-        </li>
-
-        <li class="headline-list__item">
-          <a href="https://www.abc.com.py/interior/2026/06/03/pescadores-comerciales-tendran-mas-tiempo-para-ponerse-al-dia-con-sus-licencias/" target="_blank" rel="noopener">Pescadores comerciales tendrán más tiempo para ponerse al día con sus licencias - Interior</a>
-          <span>03 jun 2026 · abc.com.py</span>
-        </li>
-
-        <li class="headline-list__item">
-          <a href="https://www.elonce.com/amp/el-nino-gana-fuerza-alertan-por-mas-lluvias-y-posibles-crecidas-hacia-fin-de-ano.htm" target="_blank" rel="noopener">El Niño gana fuerza: alertan por más lluvias y posibles crecidas de los ríos Paraná y Uruguay</a>
-          <span>03 jun 2026 · elonce.com</span>
-        </li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="group-section" id="bioenergia">
-      <div class="section-title">
-        <h2>Bioenergía</h2>
-        <span>73 noticias</span>
-      </div>
-      <div class="group-section__grid">
-        <article class="section-feature">
-          <img src="data:image/svg+xml,%0A%20%20%20%20%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201280%20720%27%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23010066%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2742%25%27%20stop-color%3D%27%230c2e8a%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2776%25%27%20stop-color%3D%27%232e6ea8%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%234d86bb%27/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%271280%27%20height%3D%27720%27%20fill%3D%27url%28%23g%29%27/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27145%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2740%27%20fill%3D%27rgba%28255%2C255%2C255%2C.82%29%27%3ENoticias%20del%20Sector%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27285%27%20font-family%3D%27Georgia%2C%20serif%27%20font-size%3D%2768%27%20fill%3D%27%23ffffff%27%3EBioenerg%C3%ADa%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27385%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2734%27%20fill%3D%27rgba%28255%2C255%2C255%2C.90%29%27%3ESIROPE%20DE%20FRESA%20400%20GR%20-%20BioEnergy%20Sport%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="SIROPE DE FRESA 400 GR - BioEnergy Sport" loading="lazy">
-          <div class="section-feature__body">
-            <div class="section-feature__kicker">Bioenergía</div>
-            <h3><a href="https://bioenergysport.com/productos/sirope-de-fresa-400-gr/" target="_blank" rel="noopener">SIROPE DE FRESA 400 GR - BioEnergy Sport</a></h3>
-            <p>SIROPE DE FRESA 400 GR · Baja en calorías y 0% en grasas · Aptos para diabéticos · Sirope endulzado a base de stevia.</p>
-            <div class="meta">08 jun 2026 · bioenergysport.com</div>
-          </div>
-        </article>
-        <ul class="headline-list">
-
-        <li class="headline-list__item">
-          <a href="https://www.ellitoral.com.ar/actualidad/2026-6-1-12-59-0-valdes-anuncio-la-primera-fabrica-de-clt-del-pais-del-bosque-correntino-a-la-construccion" target="_blank" rel="noopener">Valdés anunció la primera fábrica de CLT del país: del bosque correntino a la construcción</a>
-          <span>01 jun 2026 · ellitoral.com.ar</span>
-        </li>
-
-        <li class="headline-list__item">
-          <a href="https://www.ypaithros.gr/evrokoinovoulio-i-viooikonomia-os-nea-architektoniki-gia-ti-viosimotita-tis-evropaikis-georgias/" target="_blank" rel="noopener">Ευρωκοινοβούλιο: Η βιοοικονομία ως νέα αρχιτεκτονική για τη βιωσιμότητα της ευρωπαϊκής γεωργίας</a>
-          <span>01 jun 2026 · ypaithros.gr</span>
-        </li>
-
-        <li class="headline-list__item">
-          <a href="https://palawan-news.com/alvarez-backs-nea-interim-board-extension/" target="_blank" rel="noopener">Alvarez backs NEA interim board extension - Palawan News</a>
-          <span>01 jun 2026 · palawan-news.com</span>
-        </li>
-
-        <li class="headline-list__item">
-          <a href="https://risingnepaldaily.com/news/81091" target="_blank" rel="noopener">Budget 2026/27: NEA to be restructured into three separate agencies - The Rising Nepal</a>
-          <span>30 may 2026 · risingnepaldaily.com</span>
-        </li>
-
-        <li class="headline-list__item">
-          <a href="https://www.flz.de/internationaler-biogas-spezialist-so-will-aprovis-am-standort-weidenbach-wachsen/cnt-id-ps-fcf04c10-c117-4b55-a01c-602f2a918802" target="_blank" rel="noopener">Internationaler Biogas-Spezialist: So will Aprovis am Standort Weidenbach wachsen</a>
-          <span>27 may 2026 · flz.de</span>
-        </li>
-
-        <li class="headline-list__item">
-          <a href="https://nit.com.au/26-05-2026/24472/png-renewable-energy-deal-targets-climate-finance-gap" target="_blank" rel="noopener">PNG renewable energy deal targets climate finance gap - National Indigenous Times</a>
-          <span>26 may 2026 · nit.com.au</span>
-        </li>
-
-        <li class="headline-list__item">
-          <a href="https://novaciencia.es/la-unia-analiza-en-una-microcredencial-el-potencial-del-biogas-y-los-gases-renovables/" target="_blank" rel="noopener">La UNIA analiza en una microcredencial el potencial del biogás y los gases renovables</a>
-          <span>25 may 2026 · novaciencia.es</span>
-        </li>
-
-        <li class="headline-list__item">
-          <a href="https://noticiasambientales.com/sustainability/a-new-resource-from-waste-the-circular-bioeconomy-as-a-driver-of-innovation-and-sustainability/amp/" target="_blank" rel="noopener">A new resource from waste: the circular bioeconomy as a driver of innovation and sustainability</a>
-          <span>25 may 2026 · noticiasambientales.com</span>
-        </li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="group-section" id="hidrogeno-combustibles">
-      <div class="section-title">
-        <h2>Hidrógeno / Combustibles</h2>
-        <span>42 noticias</span>
-      </div>
-      <div class="group-section__grid">
-        <article class="section-feature">
-          <img src="data:image/svg+xml,%0A%20%20%20%20%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201280%20720%27%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23010066%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2742%25%27%20stop-color%3D%27%230c2e8a%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2776%25%27%20stop-color%3D%27%232e6ea8%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%234d86bb%27/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%271280%27%20height%3D%27720%27%20fill%3D%27url%28%23g%29%27/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27145%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2740%27%20fill%3D%27rgba%28255%2C255%2C255%2C.82%29%27%3ENoticias%20del%20Sector%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27285%27%20font-family%3D%27Georgia%2C%20serif%27%20font-size%3D%2768%27%20fill%3D%27%23ffffff%27%3EHidr%C3%B3geno%20/%20Combustibles%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27385%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2734%27%20fill%3D%27rgba%28255%2C255%2C255%2C.90%29%27%3EEn%20Argentina%2C%20dos%20parques%20fotovoltaicos%20que%20suman%2025%20MW%20solicit%E2%80%A6%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="En Argentina, dos parques fotovoltaicos que suman 25 MW solicitan capacidad de transporte" loading="lazy">
-          <div class="section-feature__body">
-            <div class="section-feature__kicker">Hidrógeno / Combustibles</div>
-            <h3><a href="https://www.pv-magazine-latam.com/2026/06/03/en-argentina-dos-parques-fotovoltaicos-que-suman-25-mw-solicitan-capacidad-de-transporte/" target="_blank" rel="noopener">En Argentina, dos parques fotovoltaicos que suman 25 MW solicitan capacidad de transporte</a></h3>
-            <p>... provincia de Corrientes, por Industrias Juan F. Secco ... Hidrógeno · Seguidores / Sistemas de montaje · Software · Electromovilidad · Plug &amp; Play ...</p>
-            <div class="meta">04 jun 2026 · pv-magazine-latam.com</div>
-          </div>
-        </article>
-        <ul class="headline-list">
-
-        <li class="headline-list__item">
-          <a href="https://cadenalaser.com/2026/06/03/un-ex-diputado-le-ofrecio-trabajo-para-abusar-de-ella-la-pesadilla-que-duro-24-dias-y-termino-en-una-condena/" target="_blank" rel="noopener">Un ex diputado le ofreció trabajo para abusar de ella: la pesadilla que duró 24 días y ...</a>
-          <span>03 jun 2026 · cadenalaser.com</span>
-        </li>
-
-        <li class="headline-list__item">
-          <a href="https://azscore.com.br/football/game/com-vida-saf-u20-ec-pelotas-u20-2026-05-31" target="_blank" rel="noopener">Com Vida Saf U20 vs Pelotas U20 31/05/2026 hoje - Azscore</a>
-          <span>31 may 2026 · azscore.com.br</span>
-        </li>
-
-        <li class="headline-list__item">
-          <a href="https://www.diarioellibertador.com.ar/modernizacion-legislativa-debatieron-el-futuro-de-la-ia-en-la-gestion-publica/" target="_blank" rel="noopener">Modernización legislativa: debatieron el desafío de la IA en la gestión pública</a>
-          <span>23 may 2026 · diarioellibertador.com.ar</span>
-        </li>
-
-        <li class="headline-list__item">
-          <a href="https://infogoya.com/el-riesgo-pais-se-acerca-a-los-500-puntos-y-avanzan-las-acciones-energeticas/" target="_blank" rel="noopener">El riesgo país se acerca a los 500 puntos y avanzan las acciones energéticas - infogoya.com</a>
-          <span>22 may 2026 · infogoya.com</span>
-        </li>
-
-        <li class="headline-list__item">
-          <a href="https://pix11.com/news/monica-makes-it-happen/goya-giveaways-nj-devils-wonder-girls-wheel-of-giving-winner-monica-makes-it-happen/" target="_blank" rel="noopener">Goya Giveaways: NJ Devils, Wonder Girls, &amp;amp; Wheel of Giving Winner | Monica Makes It Happen</a>
-          <span>21 may 2026 · pix11.com</span>
-        </li>
-
-        <li class="headline-list__item">
-          <a href="http://www.sietepuntasdigital.com/site/detail/19130-tras-14-anos-despidieron-a-dos-trabajadoras-del-smn-en-paso-de-los-libres" target="_blank" rel="noopener">Tras 14 años, despidieron a dos trabajadoras del SMN en Paso de los Libres</a>
-          <span>20 may 2026 · sietepuntasdigital.com</span>
-        </li>
-
-        <li class="headline-list__item">
-          <a href="https://noticiasambientales.com/sustentabilidade/cordoba-impulsiona-um-polo-bioenergetico-pioneiro-em-villa-maria-que-convertera-oleo-usado-em-biodiesel-sustentavel/amp/" target="_blank" rel="noopener">Córdoba impulsiona um polo bioenergético pioneiro em Villa María que converterá óleo ...</a>
-          <span>19 may 2026 · noticiasambientales.com</span>
-        </li>
-
-        <li class="headline-list__item">
-          <a href="https://www.agrositio.com.ar/noticia/198813-micro-agropecuario-es-oficial-el-gobierno-permitira-una-ampliacion-del-corte-del-gasoil-con-biodiesel.html" target="_blank" rel="noopener">Es oficial: el gobierno permitirá una ampliación del corte del gasoil con biodiesel - Agrositio</a>
-          <span>19 may 2026 · agrositio.com.ar</span>
-        </li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="group-section" id="sociedad-y-ambiente">
-      <div class="section-title">
-        <h2>Sociedad y Ambiente</h2>
-        <span>10 noticias</span>
-      </div>
-      <div class="group-section__grid">
-        <article class="section-feature">
-          <img src="data:image/svg+xml,%0A%20%20%20%20%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201280%20720%27%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23010066%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2742%25%27%20stop-color%3D%27%230c2e8a%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2776%25%27%20stop-color%3D%27%232e6ea8%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%234d86bb%27/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%271280%27%20height%3D%27720%27%20fill%3D%27url%28%23g%29%27/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27145%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2740%27%20fill%3D%27rgba%28255%2C255%2C255%2C.82%29%27%3ENoticias%20del%20Sector%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27285%27%20font-family%3D%27Georgia%2C%20serif%27%20font-size%3D%2768%27%20fill%3D%27%23ffffff%27%3ESociedad%20y%20Ambiente%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27385%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2734%27%20fill%3D%27rgba%28255%2C255%2C255%2C.90%29%27%3ELa%20Central%20Hidroel%C3%A9ctrica%20A%C3%B1a%20Cu%C3%A1%20tendr%C3%A1%20un%20moderno%20sistema%20par%E2%80%A6%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="La Central Hidroeléctrica Aña Cuá tendrá un moderno sistema para preservar migraciones ..." loading="lazy">
-          <div class="section-feature__body">
-            <div class="section-feature__kicker">Sociedad y Ambiente</div>
-            <h3><a href="https://www.lapoliticaonline.com/amp/347601-la-central-hidroelectrica-ana-cua-tendra-un-moderno-sistema-para-preservar-migraciones-de-peces-del-parana/" target="_blank" rel="noopener">La Central Hidroeléctrica Aña Cuá tendrá un moderno sistema para preservar migraciones ...</a></h3>
-            <p>... impactos ambientales y preservar la biodiversidad de la región. Uno de ... En el caso del brazo Aña Cuá, el embalse Yacyretá opera a una cota ...</p>
-            <div class="meta">02 jun 2026 · lapoliticaonline.com</div>
-          </div>
-        </article>
-        <ul class="headline-list">
-
-        <li class="headline-list__item">
-          <a href="https://www.lapoliticaonline.com/paraguay/energia-py/pena-quiere-activar-la-construccion-de-una-represa-con-argentina-que-los-misioneros-rechazaron-hace-30-anos-2234/" target="_blank" rel="noopener">Peña quiere reactivar una represa con Argentina que los misioneros rechazaron hace 30 años</a>
-          <span>20 may 2026 · lapoliticaonline.com</span>
-        </li>
-
-        <li class="headline-list__item">
-          <a href="https://www.eby.gov.py/encarnacion-contara-con-un-centro-de-salud-mental-y-adicciones-mediante-apoyo-de-yacyreta/" target="_blank" rel="noopener">Encarnación contará con un Centro de Salud Mental y Adicciones mediante apoyo de Yacyretá</a>
-          <span>19 may 2026 · eby.gov.py</span>
-        </li>
-
-        <li class="headline-list__item">
-          <a href="https://www.lanacion.com.py/politica/2026/05/18/delegado-argentino-respalda-concrecion-de-la-represa-de-corpus/" target="_blank" rel="noopener">Delegado argentino respalda concreción de la represa de Corpus - La Nación</a>
-          <span>19 may 2026 · lanacion.com.py</span>
-        </li>
-
-        <li class="headline-list__item">
-          <a href="https://insantiagodelestero.info/infoenergia-2/yacyreta-avanza-con-una-obra-clave-que-sumara-energia-para-abastecer-a-millones-de-hogares-argentinos-2" target="_blank" rel="noopener">Yacyretá avanza con una obra clave que sumará energía para abastecer a millones de ...</a>
-          <span>13 may 2026 · insantiagodelestero.info</span>
-        </li>
-
-        <li class="headline-list__item">
-          <a href="https://periodismomisionero.com.ar/corpus-vuelve-a-sonar/" target="_blank" rel="noopener">Corpus vuelve a sonar, pero su concreción está lejana - Periodismo Misionero</a>
-          <span>28 abr 2026 · periodismomisionero.com.ar</span>
-        </li>
-
-        <li class="headline-list__item">
-          <a href="https://www.perfil.com/noticias/nea/deuda-historica-corrientes-y-nacion-buscan-un-acuerdo-por-las-regalias-de-yacyreta.phtml" target="_blank" rel="noopener">Deuda histórica: Corrientes y Nación buscan un acuerdo por las regalías de Yacyretá</a>
-          <span>17 mar 2026 · perfil.com</span>
-        </li>
-
-        <li class="headline-list__item">
-          <a href="https://www.primeraedicion.com.ar/nota/101086943/presentan-amparo-para-frenar-relleno-en-la-isla-del-medio-por-falta-de-estudio-de-impacto-ambiental/" target="_blank" rel="noopener">Presentan amparo para frenar relleno en la Isla del Medio por falta de estudio de impacto ambiental</a>
-          <span>12 mar 2026 · primeraedicion.com.ar</span>
-        </li>
-
-        <li class="headline-list__item">
-          <a href="https://radiocataratas.com/2026/03/12/asociacion-civil-orembae-impulsa-amparo-ambiental-para-frenar-obras-irregulares-en-la-isla-del-medio/" target="_blank" rel="noopener">Asociación Civil Orembaé impulsa amparo ambiental para frenar obras irregulares en la Isla ...</a>
-          <span>12 mar 2026 · radiocataratas.com</span>
-        </li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="group-section" id="transicion-energetica">
-      <div class="section-title">
-        <h2>Transición Energética</h2>
-        <span>3 noticias</span>
-      </div>
-      <div class="group-section__grid">
-        <article class="section-feature">
-          <img src="https://infoenergia.info/images/resize/667850-1200x675.webp" alt="Autorizan dos nuevos parques solares en Corrientes que aportarán 27 MW al sistema ... - IN Salta" loading="lazy">
-          <div class="section-feature__body">
-            <div class="section-feature__kicker">Transición Energética</div>
-            <h3><a href="https://insalta.info/infoenergia/autorizan-dos-nuevos-parques-solares-en-corrientes-que-aportaran-27-mw-al-sistema-electrico-argentino-2" target="_blank" rel="noopener">Autorizan dos nuevos parques solares en Corrientes que aportarán 27 MW al sistema ... - IN Salta</a></h3>
-            <p>... energía renovable, fortaleciendo el crecimiento de la ... Dirección Provincial de Energía de Corrientes (DPEC) y la transportista Transnea.</p>
-            <div class="meta">02 jun 2026 · insalta.info</div>
-          </div>
-        </article>
-        <ul class="headline-list">
-
-        <li class="headline-list__item">
-          <a href="https://www.confirmado.com.ar/vernota.asp?id_noticia=32267" target="_blank" rel="noopener">La UTA de la provincia de Corrientes se suma al paro general y este jueves no habrá ...</a>
-          <span>20 feb 2026 · confirmado.com.ar</span>
-        </li>
-
-        <li class="headline-list__item">
-          <a href="https://www.lt7noticias.com/76810-el-gobierno-de-corrientes-convoco-a-los-gremios-docentes-a-dias-del-inicio-del-ciclo-lectivo" target="_blank" rel="noopener">El Gobierno de Corrientes convocó a los gremios docentes a días del inicio del ciclo lectivo</a>
-          <span>17 feb 2026 · lt7noticias.com</span>
-        </li>
-        </ul>
-      </div>
-    </section>
-
     <section class="group-section" id="seguridad">
       <div class="section-title">
         <h2>Seguridad</h2>
         <span>309 noticias</span>
+        <a class="back-home-link" href="#inicio">Volver al inicio</a>
       </div>
       <div class="group-section__grid">
         <article class="section-feature">
@@ -1500,6 +1505,67 @@ main { padding: 28px 0 56px; }
         <li class="headline-list__item">
           <a href="https://repositorio.unne.edu.ar/handle/123456789/59144" target="_blank" rel="noopener">Herpetofauna del área de influencia del embalse de la Represa ...</a>
           <span>27 ene 2026 · repositorio.unne.edu.ar</span>
+        </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="group-section" id="sociedad-y-ambiente">
+      <div class="section-title">
+        <h2>Sociedad y Ambiente</h2>
+        <span>10 noticias</span>
+        <a class="back-home-link" href="#inicio">Volver al inicio</a>
+      </div>
+      <div class="group-section__grid">
+        <article class="section-feature">
+          <img src="data:image/svg+xml,%0A%20%20%20%20%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201280%20720%27%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23010066%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2742%25%27%20stop-color%3D%27%230c2e8a%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2776%25%27%20stop-color%3D%27%232e6ea8%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%234d86bb%27/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%271280%27%20height%3D%27720%27%20fill%3D%27url%28%23g%29%27/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27145%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2740%27%20fill%3D%27rgba%28255%2C255%2C255%2C.82%29%27%3ENoticias%20del%20Sector%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27285%27%20font-family%3D%27Georgia%2C%20serif%27%20font-size%3D%2768%27%20fill%3D%27%23ffffff%27%3ESociedad%20y%20Ambiente%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27385%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2734%27%20fill%3D%27rgba%28255%2C255%2C255%2C.90%29%27%3ELa%20Central%20Hidroel%C3%A9ctrica%20A%C3%B1a%20Cu%C3%A1%20tendr%C3%A1%20un%20moderno%20sistema%20par%E2%80%A6%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="La Central Hidroeléctrica Aña Cuá tendrá un moderno sistema para preservar migraciones ..." loading="lazy">
+          <div class="section-feature__body">
+            <div class="section-feature__kicker">Sociedad y Ambiente</div>
+            <h3><a href="https://www.lapoliticaonline.com/amp/347601-la-central-hidroelectrica-ana-cua-tendra-un-moderno-sistema-para-preservar-migraciones-de-peces-del-parana/" target="_blank" rel="noopener">La Central Hidroeléctrica Aña Cuá tendrá un moderno sistema para preservar migraciones ...</a></h3>
+            <p>... impactos ambientales y preservar la biodiversidad de la región. Uno de ... En el caso del brazo Aña Cuá, el embalse Yacyretá opera a una cota ...</p>
+            <div class="meta">02 jun 2026 · lapoliticaonline.com</div>
+          </div>
+        </article>
+        <ul class="headline-list">
+
+        <li class="headline-list__item">
+          <a href="https://www.lapoliticaonline.com/paraguay/energia-py/pena-quiere-activar-la-construccion-de-una-represa-con-argentina-que-los-misioneros-rechazaron-hace-30-anos-2234/" target="_blank" rel="noopener">Peña quiere reactivar una represa con Argentina que los misioneros rechazaron hace 30 años</a>
+          <span>20 may 2026 · lapoliticaonline.com</span>
+        </li>
+
+        <li class="headline-list__item">
+          <a href="https://www.eby.gov.py/encarnacion-contara-con-un-centro-de-salud-mental-y-adicciones-mediante-apoyo-de-yacyreta/" target="_blank" rel="noopener">Encarnación contará con un Centro de Salud Mental y Adicciones mediante apoyo de Yacyretá</a>
+          <span>19 may 2026 · eby.gov.py</span>
+        </li>
+
+        <li class="headline-list__item">
+          <a href="https://www.lanacion.com.py/politica/2026/05/18/delegado-argentino-respalda-concrecion-de-la-represa-de-corpus/" target="_blank" rel="noopener">Delegado argentino respalda concreción de la represa de Corpus - La Nación</a>
+          <span>19 may 2026 · lanacion.com.py</span>
+        </li>
+
+        <li class="headline-list__item">
+          <a href="https://insantiagodelestero.info/infoenergia-2/yacyreta-avanza-con-una-obra-clave-que-sumara-energia-para-abastecer-a-millones-de-hogares-argentinos-2" target="_blank" rel="noopener">Yacyretá avanza con una obra clave que sumará energía para abastecer a millones de ...</a>
+          <span>13 may 2026 · insantiagodelestero.info</span>
+        </li>
+
+        <li class="headline-list__item">
+          <a href="https://periodismomisionero.com.ar/corpus-vuelve-a-sonar/" target="_blank" rel="noopener">Corpus vuelve a sonar, pero su concreción está lejana - Periodismo Misionero</a>
+          <span>28 abr 2026 · periodismomisionero.com.ar</span>
+        </li>
+
+        <li class="headline-list__item">
+          <a href="https://www.perfil.com/noticias/nea/deuda-historica-corrientes-y-nacion-buscan-un-acuerdo-por-las-regalias-de-yacyreta.phtml" target="_blank" rel="noopener">Deuda histórica: Corrientes y Nación buscan un acuerdo por las regalías de Yacyretá</a>
+          <span>17 mar 2026 · perfil.com</span>
+        </li>
+
+        <li class="headline-list__item">
+          <a href="https://www.primeraedicion.com.ar/nota/101086943/presentan-amparo-para-frenar-relleno-en-la-isla-del-medio-por-falta-de-estudio-de-impacto-ambiental/" target="_blank" rel="noopener">Presentan amparo para frenar relleno en la Isla del Medio por falta de estudio de impacto ambiental</a>
+          <span>12 mar 2026 · primeraedicion.com.ar</span>
+        </li>
+
+        <li class="headline-list__item">
+          <a href="https://radiocataratas.com/2026/03/12/asociacion-civil-orembae-impulsa-amparo-ambiental-para-frenar-obras-irregulares-en-la-isla-del-medio/" target="_blank" rel="noopener">Asociación Civil Orembaé impulsa amparo ambiental para frenar obras irregulares en la Isla ...</a>
+          <span>12 mar 2026 · radiocataratas.com</span>
         </li>
         </ul>
       </div>
