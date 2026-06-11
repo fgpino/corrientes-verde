@@ -286,6 +286,43 @@ main { padding: 28px 0 56px; }
   .footer-grid { grid-template-columns: repeat(5, 1fr); gap: 40px; }
 }
 
+
+/* === LATEST NEWS WITH LEFT IMAGE === */
+.latest-item--media {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: 18px;
+  align-items: stretch;
+}
+.latest-item__thumb {
+  display: block;
+  width: 100%;
+  min-height: 118px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--bg);
+}
+.latest-item__thumb img {
+  width: 100%;
+  height: 100%;
+  min-height: 118px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+}
+.latest-item__body { min-width: 0; }
+@media (max-width: 768px) {
+  .latest-item--media { grid-template-columns: 112px minmax(0, 1fr); gap: 14px; }
+  .latest-item__thumb,
+  .latest-item__thumb img { min-height: 96px; }
+  .latest-item--media p { display: none; }
+}
+@media (max-width: 460px) {
+  .latest-item--media { grid-template-columns: 88px minmax(0, 1fr); gap: 12px; padding: 18px; }
+  .latest-item__thumb,
+  .latest-item__thumb img { min-height: 82px; }
+  .latest-item--media h3 { font-size: 15px; }
+}
+
 </style>
 </head>
 <body>
@@ -464,88 +501,148 @@ main { padding: 28px 0 56px; }
         
     
 
-    <article class="latest-item">
-      <div class="latest-item__kicker">Hidroelectricidad</div>
-      <h3><a href="https://www.ellitoral.com.ar/actualidad/2026-6-10-12-6-0-juan-pablo-valdes-recibio-al-embajador-de-austria-con-una-agenda-para-traer-inversiones-a-corrientes" target="_blank" rel="noopener">Juan Pablo Valdés recibió al embajador de Austria con una agenda para atraer inversiones ...</a></h3>
-      <p>Tras el encuentro realizado en Casa de Gobierno, la comitiva se trasladó a las localidades de Ituzaingó y Gobernador Virasoro, donde recorrieron ...</p>
-      <div class="meta">11 jun 2026 · ellitoral.com.ar</div>
+    <article class="latest-item latest-item--media">
+      <a class="latest-item__thumb" href="https://www.ellitoral.com.ar/actualidad/2026-6-10-12-6-0-juan-pablo-valdes-recibio-al-embajador-de-austria-con-una-agenda-para-traer-inversiones-a-corrientes" target="_blank" rel="noopener" aria-label="Juan Pablo Valdés recibió al embajador de Austria con una agenda para atraer inversiones ...">
+        <img src="https://pxcdn.ellitoral.com.ar/litoral/062026/1781104388913.jpg?&amp;cw=1200&amp;ch=630" alt="Juan Pablo Valdés recibió al embajador de Austria con una agenda para atraer inversiones ..." loading="lazy">
+      </a>
+      <div class="latest-item__body">
+        <div class="latest-item__kicker">Hidroelectricidad</div>
+        <h3><a href="https://www.ellitoral.com.ar/actualidad/2026-6-10-12-6-0-juan-pablo-valdes-recibio-al-embajador-de-austria-con-una-agenda-para-traer-inversiones-a-corrientes" target="_blank" rel="noopener">Juan Pablo Valdés recibió al embajador de Austria con una agenda para atraer inversiones ...</a></h3>
+        <p>Tras el encuentro realizado en Casa de Gobierno, la comitiva se trasladó a las localidades de Ituzaingó y Gobernador Virasoro, donde recorrieron ...</p>
+        <div class="meta">11 jun 2026 · ellitoral.com.ar</div>
+      </div>
     </article>
 
-    <article class="latest-item">
-      <div class="latest-item__kicker">Generación Eléctrica</div>
-      <h3><a href="https://www.elcomercial.com.ar/54224-rios-libres-|-brasil-erigio-mas-de-60-represas-en-el-parana-y-6-sobre-el-iguazu" target="_blank" rel="noopener">¿Ríos libres? | Brasil erigió más de 60 represas en el Paraná y 6 sobre el Iguazú</a></h3>
-      <p>... MW), mientras que Yacyretá, binacional de la Argentina y Paraguay, se ubica en el curso inferior del río, en la provincia de Corrientes. En cuanto ...</p>
-      <div class="meta">11 jun 2026 · elcomercial.com.ar</div>
+    <article class="latest-item latest-item--media">
+      <a class="latest-item__thumb" href="https://www.elcomercial.com.ar/54224-rios-libres-|-brasil-erigio-mas-de-60-represas-en-el-parana-y-6-sobre-el-iguazu" target="_blank" rel="noopener" aria-label="¿Ríos libres? | Brasil erigió más de 60 represas en el Paraná y 6 sobre el Iguazú">
+        <img src="data:image/svg+xml,%0A%20%20%20%20%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201280%20720%27%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%231c2535%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2755%25%27%20stop-color%3D%27%232d6a4f%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%23e05535%27/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%271280%27%20height%3D%27720%27%20fill%3D%27url%28%23g%29%27/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27145%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2740%27%20fill%3D%27rgba%28255%2C255%2C255%2C.78%29%27%3ENoticias%20del%20Sector%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27285%27%20font-family%3D%27Georgia%2C%20serif%27%20font-size%3D%2768%27%20fill%3D%27%23fff%27%3EGeneraci%C3%B3n%20El%C3%A9ctrica%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27385%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2734%27%20fill%3D%27rgba%28255%2C255%2C255%2C.84%29%27%3E%C2%BFR%C3%ADos%20libres%3F%20%7C%20Brasil%20erigi%C3%B3%20m%C3%A1s%20de%2060%20represas%20en%20el%20Paran%C3%A1%20y%E2%80%A6%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="¿Ríos libres? | Brasil erigió más de 60 represas en el Paraná y 6 sobre el Iguazú" loading="lazy">
+      </a>
+      <div class="latest-item__body">
+        <div class="latest-item__kicker">Generación Eléctrica</div>
+        <h3><a href="https://www.elcomercial.com.ar/54224-rios-libres-|-brasil-erigio-mas-de-60-represas-en-el-parana-y-6-sobre-el-iguazu" target="_blank" rel="noopener">¿Ríos libres? | Brasil erigió más de 60 represas en el Paraná y 6 sobre el Iguazú</a></h3>
+        <p>... MW), mientras que Yacyretá, binacional de la Argentina y Paraguay, se ubica en el curso inferior del río, en la provincia de Corrientes. En cuanto ...</p>
+        <div class="meta">11 jun 2026 · elcomercial.com.ar</div>
+      </div>
     </article>
 
-    <article class="latest-item">
-      <div class="latest-item__kicker">Generación Eléctrica</div>
-      <h3><a href="https://www.diarioprimerahora.com/index.php/provinciales/109438-corrientes-lanza-los-primeros-bonos-verdes-y-sociales-provinciales" target="_blank" rel="noopener">CORRIENTES LANZA LOS PRIMEROS BONOS VERDES Y SOCIALES PROVINCIALES</a></h3>
-      <p>La diputada provincial Sofía Brambilla (Bloque PRO – Vamos Corrientes) presentó ante la Honorable Cámara de Diputados de la Provincia de Corrientes ...</p>
-      <div class="meta">11 jun 2026 · diarioprimerahora.com</div>
+    <article class="latest-item latest-item--media">
+      <a class="latest-item__thumb" href="https://www.diarioprimerahora.com/index.php/provinciales/109438-corrientes-lanza-los-primeros-bonos-verdes-y-sociales-provinciales" target="_blank" rel="noopener" aria-label="CORRIENTES LANZA LOS PRIMEROS BONOS VERDES Y SOCIALES PROVINCIALES">
+        <img src="https://www.diarioprimerahora.com/images/Forestacionaerea.jpeg" alt="CORRIENTES LANZA LOS PRIMEROS BONOS VERDES Y SOCIALES PROVINCIALES" loading="lazy">
+      </a>
+      <div class="latest-item__body">
+        <div class="latest-item__kicker">Generación Eléctrica</div>
+        <h3><a href="https://www.diarioprimerahora.com/index.php/provinciales/109438-corrientes-lanza-los-primeros-bonos-verdes-y-sociales-provinciales" target="_blank" rel="noopener">CORRIENTES LANZA LOS PRIMEROS BONOS VERDES Y SOCIALES PROVINCIALES</a></h3>
+        <p>La diputada provincial Sofía Brambilla (Bloque PRO – Vamos Corrientes) presentó ante la Honorable Cámara de Diputados de la Provincia de Corrientes ...</p>
+        <div class="meta">11 jun 2026 · diarioprimerahora.com</div>
+      </div>
     </article>
 
-    <article class="latest-item">
-      <div class="latest-item__kicker">Hidroelectricidad</div>
-      <h3><a href="http://www.sietepuntasdigital.com/site/detail/19308-valdes-recibio-al-embajador-de-austria-y-mostro-el-potencial-del-desarrollo-correntino" target="_blank" rel="noopener">Valdés recibió al embajador de Austria y mostró el potencial del desarrollo correntino</a></h3>
-      <p>El primer encuentro se realizó en Casa de Gobierno donde tras la visita protocolar se trasladaron hasta las localidades de Ituzaingó y Virasoro, donde ...</p>
-      <div class="meta">10 jun 2026 · sietepuntasdigital.com</div>
+    <article class="latest-item latest-item--media">
+      <a class="latest-item__thumb" href="http://www.sietepuntasdigital.com/site/detail/19308-valdes-recibio-al-embajador-de-austria-y-mostro-el-potencial-del-desarrollo-correntino" target="_blank" rel="noopener" aria-label="Valdés recibió al embajador de Austria y mostró el potencial del desarrollo correntino">
+        <img src="http://www.sietepuntasdigital.com/themes/7puntas/img/logo_old.png" alt="Valdés recibió al embajador de Austria y mostró el potencial del desarrollo correntino" loading="lazy">
+      </a>
+      <div class="latest-item__body">
+        <div class="latest-item__kicker">Hidroelectricidad</div>
+        <h3><a href="http://www.sietepuntasdigital.com/site/detail/19308-valdes-recibio-al-embajador-de-austria-y-mostro-el-potencial-del-desarrollo-correntino" target="_blank" rel="noopener">Valdés recibió al embajador de Austria y mostró el potencial del desarrollo correntino</a></h3>
+        <p>El primer encuentro se realizó en Casa de Gobierno donde tras la visita protocolar se trasladaron hasta las localidades de Ituzaingó y Virasoro, donde ...</p>
+        <div class="meta">10 jun 2026 · sietepuntasdigital.com</div>
+      </div>
     </article>
 
-    <article class="latest-item">
-      <div class="latest-item__kicker">Emisiones y Carbono</div>
-      <h3><a href="https://www.corrientespositiva.com.ar/notix/noticia/68457/el-gobierno-de-corrientes-activa-un-plan-preventivo-ante-la-llegada-del-supernio.htm" target="_blank" rel="noopener">El Gobierno de Corrientes activa un plan preventivo ante la llegada del &amp;quot;Superniño&amp;quot;</a></h3>
-      <p>El Gobierno de Corrientes activa un plan preventivo ante la llegada del &quot;Superniño&quot; ... Además, se prevé la ejecución de obras puntuales de mitigación ...</p>
-      <div class="meta">10 jun 2026 · corrientespositiva.com.ar</div>
+    <article class="latest-item latest-item--media">
+      <a class="latest-item__thumb" href="https://www.corrientespositiva.com.ar/notix/noticia/68457/el-gobierno-de-corrientes-activa-un-plan-preventivo-ante-la-llegada-del-supernio.htm" target="_blank" rel="noopener" aria-label="El Gobierno de Corrientes activa un plan preventivo ante la llegada del &amp;quot;Superniño&amp;quot;">
+        <img src="https://www.corrientespositiva.com.ar/notix/multimedia/imagenes/fotos/2026-06-10/235992.jpg" alt="El Gobierno de Corrientes activa un plan preventivo ante la llegada del &amp;quot;Superniño&amp;quot;" loading="lazy">
+      </a>
+      <div class="latest-item__body">
+        <div class="latest-item__kicker">Emisiones y Carbono</div>
+        <h3><a href="https://www.corrientespositiva.com.ar/notix/noticia/68457/el-gobierno-de-corrientes-activa-un-plan-preventivo-ante-la-llegada-del-supernio.htm" target="_blank" rel="noopener">El Gobierno de Corrientes activa un plan preventivo ante la llegada del &amp;quot;Superniño&amp;quot;</a></h3>
+        <p>El Gobierno de Corrientes activa un plan preventivo ante la llegada del &quot;Superniño&quot; ... Además, se prevé la ejecución de obras puntuales de mitigación ...</p>
+        <div class="meta">10 jun 2026 · corrientespositiva.com.ar</div>
+      </div>
     </article>
 
-    <article class="latest-item">
-      <div class="latest-item__kicker">Hidroelectricidad</div>
-      <h3><a href="https://www.abc.com.py/nacionales/2026/06/10/obras-de-empedrado-financiadas-por-itaipu-generan-malestar-y-reclamos-en-ayolas/" target="_blank" rel="noopener">Ayolas: paralización de obras del Plan 1.000, financiadas por Itaipú, genera reclamos</a></h3>
-      <p>AYOLAS. Pobladores del barrio San José Obrero - Zona Norte expresaron su malestar por la paralización de las obras de empedrado financiadas por ...</p>
-      <div class="meta">10 jun 2026 · abc.com.py</div>
+    <article class="latest-item latest-item--media">
+      <a class="latest-item__thumb" href="https://www.abc.com.py/nacionales/2026/06/10/obras-de-empedrado-financiadas-por-itaipu-generan-malestar-y-reclamos-en-ayolas/" target="_blank" rel="noopener" aria-label="Ayolas: paralización de obras del Plan 1.000, financiadas por Itaipú, genera reclamos">
+        <img src="https://www.abc.com.py/resizer/v2/SHKRE3YUKJG5RCUVCLLFA4CLKE.jpg?auth=0f75b66736db810366e9cea34a432fd0617912eb9bc97649a97893330faf64d6&amp;width=770&amp;smart=true" alt="Ayolas: paralización de obras del Plan 1.000, financiadas por Itaipú, genera reclamos" loading="lazy">
+      </a>
+      <div class="latest-item__body">
+        <div class="latest-item__kicker">Hidroelectricidad</div>
+        <h3><a href="https://www.abc.com.py/nacionales/2026/06/10/obras-de-empedrado-financiadas-por-itaipu-generan-malestar-y-reclamos-en-ayolas/" target="_blank" rel="noopener">Ayolas: paralización de obras del Plan 1.000, financiadas por Itaipú, genera reclamos</a></h3>
+        <p>AYOLAS. Pobladores del barrio San José Obrero - Zona Norte expresaron su malestar por la paralización de las obras de empedrado financiadas por ...</p>
+        <div class="meta">10 jun 2026 · abc.com.py</div>
+      </div>
     </article>
 
-    <article class="latest-item">
-      <div class="latest-item__kicker">Generación Eléctrica</div>
-      <h3><a href="https://www.radioeme.com/2026/06/fenomeno-el-nino-santa-fe-busca-prevenir-el-impacto-junto-a-la-mesa-federal/" target="_blank" rel="noopener">Fenómeno &amp;quot;El Niño&amp;quot;: Santa Fe busca prevenir el impacto junto a la Mesa Federal</a></h3>
-      <p>La primera jornada se realizó en la ciudad de Santa Fe y la segunda tuvo lugar recientemente en la provincia de Corrientes. ... “Será el parque solar ...</p>
-      <div class="meta">10 jun 2026 · radioeme.com</div>
+    <article class="latest-item latest-item--media">
+      <a class="latest-item__thumb" href="https://www.radioeme.com/2026/06/fenomeno-el-nino-santa-fe-busca-prevenir-el-impacto-junto-a-la-mesa-federal/" target="_blank" rel="noopener" aria-label="Fenómeno &amp;quot;El Niño&amp;quot;: Santa Fe busca prevenir el impacto junto a la Mesa Federal">
+        <img src="data:image/svg+xml,%0A%20%20%20%20%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201280%20720%27%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%231c2535%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2755%25%27%20stop-color%3D%27%232d6a4f%27/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%23e05535%27/%3E%0A%20%20%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3C/defs%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%271280%27%20height%3D%27720%27%20fill%3D%27url%28%23g%29%27/%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27145%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2740%27%20fill%3D%27rgba%28255%2C255%2C255%2C.78%29%27%3ENoticias%20del%20Sector%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27285%27%20font-family%3D%27Georgia%2C%20serif%27%20font-size%3D%2768%27%20fill%3D%27%23fff%27%3EGeneraci%C3%B3n%20El%C3%A9ctrica%3C/text%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2780%27%20y%3D%27385%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2734%27%20fill%3D%27rgba%28255%2C255%2C255%2C.84%29%27%3EFen%C3%B3meno%20%26quot%3BEl%20Ni%C3%B1o%26quot%3B%3A%20Santa%20Fe%20busca%20prevenir%20el%20impacto%20junto%20a%E2%80%A6%3C/text%3E%0A%20%20%20%20%3C/svg%3E%0A%20%20%20%20" alt="Fenómeno &amp;quot;El Niño&amp;quot;: Santa Fe busca prevenir el impacto junto a la Mesa Federal" loading="lazy">
+      </a>
+      <div class="latest-item__body">
+        <div class="latest-item__kicker">Generación Eléctrica</div>
+        <h3><a href="https://www.radioeme.com/2026/06/fenomeno-el-nino-santa-fe-busca-prevenir-el-impacto-junto-a-la-mesa-federal/" target="_blank" rel="noopener">Fenómeno &amp;quot;El Niño&amp;quot;: Santa Fe busca prevenir el impacto junto a la Mesa Federal</a></h3>
+        <p>La primera jornada se realizó en la ciudad de Santa Fe y la segunda tuvo lugar recientemente en la provincia de Corrientes. ... “Será el parque solar ...</p>
+        <div class="meta">10 jun 2026 · radioeme.com</div>
+      </div>
     </article>
 
-    <article class="latest-item">
-      <div class="latest-item__kicker">Hidroelectricidad</div>
-      <h3><a href="https://radioinfinitagoya.com.ar/v1/2026/06/10/ituzaingo-capturaron-a-dos-narcos-con-ladrillos-cocaina-valuados-en-37-millones/" target="_blank" rel="noopener">Ituzaingó: capturaron a dos narcos con ladrillos cocaína valuados en $37 millones</a></h3>
-      <p>Dos narcotraficantes oriundos de la ciudad de Posadas, Misiones, resultaron detenidos en las afueras de la ciudad correntina de Ituzaingó. La Policía ...</p>
-      <div class="meta">10 jun 2026 · radioinfinitagoya.com.ar</div>
+    <article class="latest-item latest-item--media">
+      <a class="latest-item__thumb" href="https://radioinfinitagoya.com.ar/v1/2026/06/10/ituzaingo-capturaron-a-dos-narcos-con-ladrillos-cocaina-valuados-en-37-millones/" target="_blank" rel="noopener" aria-label="Ituzaingó: capturaron a dos narcos con ladrillos cocaína valuados en $37 millones">
+        <img src="https://radioinfinitagoya.com.ar/desarrolloweb/LOGO-SIN-NADA.png" alt="Ituzaingó: capturaron a dos narcos con ladrillos cocaína valuados en $37 millones" loading="lazy">
+      </a>
+      <div class="latest-item__body">
+        <div class="latest-item__kicker">Hidroelectricidad</div>
+        <h3><a href="https://radioinfinitagoya.com.ar/v1/2026/06/10/ituzaingo-capturaron-a-dos-narcos-con-ladrillos-cocaina-valuados-en-37-millones/" target="_blank" rel="noopener">Ituzaingó: capturaron a dos narcos con ladrillos cocaína valuados en $37 millones</a></h3>
+        <p>Dos narcotraficantes oriundos de la ciudad de Posadas, Misiones, resultaron detenidos en las afueras de la ciudad correntina de Ituzaingó. La Policía ...</p>
+        <div class="meta">10 jun 2026 · radioinfinitagoya.com.ar</div>
+      </div>
     </article>
 
-    <article class="latest-item">
-      <div class="latest-item__kicker">Infraestructura hídrica</div>
-      <h3><a href="https://a1noticias.com.ar/nota/16541/la-provincia-licito-obras-cloacales-para-olavarria" target="_blank" rel="noopener">La Provincia licitó obras cloacales para Olavarría - A1 Noticias</a></h3>
-      <p>... planta de tratamiento. Las cañerías serán todas con PVC cloacal y el ... En el marco de su visita a la provincia de Corrientes, el gobernador ...</p>
-      <div class="meta">10 jun 2026 · a1noticias.com.ar</div>
+    <article class="latest-item latest-item--media">
+      <a class="latest-item__thumb" href="https://a1noticias.com.ar/nota/16541/la-provincia-licito-obras-cloacales-para-olavarria" target="_blank" rel="noopener" aria-label="La Provincia licitó obras cloacales para Olavarría - A1 Noticias">
+        <img src="https://a1noticias.com.ar/06-2026/resize_1781034977.jpg" alt="La Provincia licitó obras cloacales para Olavarría - A1 Noticias" loading="lazy">
+      </a>
+      <div class="latest-item__body">
+        <div class="latest-item__kicker">Infraestructura hídrica</div>
+        <h3><a href="https://a1noticias.com.ar/nota/16541/la-provincia-licito-obras-cloacales-para-olavarria" target="_blank" rel="noopener">La Provincia licitó obras cloacales para Olavarría - A1 Noticias</a></h3>
+        <p>... planta de tratamiento. Las cañerías serán todas con PVC cloacal y el ... En el marco de su visita a la provincia de Corrientes, el gobernador ...</p>
+        <div class="meta">10 jun 2026 · a1noticias.com.ar</div>
+      </div>
     </article>
 
-    <article class="latest-item">
-      <div class="latest-item__kicker">Marco Legal (fuentes)</div>
-      <h3><a href="https://www.dpec.com.ar/8422/MIRCOLES-100626-a-1400-a-1600-h-a-PASO-DE-LA-PATRIA-B-Rincon-parte-del-B-Chaqueno-y-zonas-de-influencia" target="_blank" rel="noopener">MIÉRCOLES 10/06/26 | 14:00 a 16:00 h | DPEC | Dirección Provincial de Energía de Corrientes</a></h3>
-      <p>Requisitos para el uso de soportes de la red eléctrica por empresas ajenas a la DPEC ... energía a una nueva LMT, por lo cual se interrumpirá el ...</p>
-      <div class="meta">10 jun 2026 · dpec.com.ar</div>
+    <article class="latest-item latest-item--media">
+      <a class="latest-item__thumb" href="https://www.dpec.com.ar/8422/MIRCOLES-100626-a-1400-a-1600-h-a-PASO-DE-LA-PATRIA-B-Rincon-parte-del-B-Chaqueno-y-zonas-de-influencia" target="_blank" rel="noopener" aria-label="MIÉRCOLES 10/06/26 | 14:00 a 16:00 h | DPEC | Dirección Provincial de Energía de Corrientes">
+        <img src="https://www.dpec.com.ar:443/content/DPEC/imagenes/DPEC-logo.png" alt="MIÉRCOLES 10/06/26 | 14:00 a 16:00 h | DPEC | Dirección Provincial de Energía de Corrientes" loading="lazy">
+      </a>
+      <div class="latest-item__body">
+        <div class="latest-item__kicker">Marco Legal (fuentes)</div>
+        <h3><a href="https://www.dpec.com.ar/8422/MIRCOLES-100626-a-1400-a-1600-h-a-PASO-DE-LA-PATRIA-B-Rincon-parte-del-B-Chaqueno-y-zonas-de-influencia" target="_blank" rel="noopener">MIÉRCOLES 10/06/26 | 14:00 a 16:00 h | DPEC | Dirección Provincial de Energía de Corrientes</a></h3>
+        <p>Requisitos para el uso de soportes de la red eléctrica por empresas ajenas a la DPEC ... energía a una nueva LMT, por lo cual se interrumpirá el ...</p>
+        <div class="meta">10 jun 2026 · dpec.com.ar</div>
+      </div>
     </article>
 
-    <article class="latest-item">
-      <div class="latest-item__kicker">Marco Legal (fuentes)</div>
-      <h3><a href="https://www.dpec.com.ar/8421/MIRCOLES-100626a-0700-a-0900-h-a-IT-IBAT-Ruta-n-12-kilometro-1111-y-zonas-de-influencia" target="_blank" rel="noopener">07:00 a 09:00 h | ITÁ IBATÉ: Ruta n° 12 kilómetro 1.111 y zonas de influencia. | DPEC</a></h3>
-      <p>Requisitos para el uso de soportes de la red eléctrica por empresas ajenas a la DPEC ... energía eléctrica en la localidad de ITÁ IBATÉ, de acuerdo al ...</p>
-      <div class="meta">10 jun 2026 · dpec.com.ar</div>
+    <article class="latest-item latest-item--media">
+      <a class="latest-item__thumb" href="https://www.dpec.com.ar/8421/MIRCOLES-100626a-0700-a-0900-h-a-IT-IBAT-Ruta-n-12-kilometro-1111-y-zonas-de-influencia" target="_blank" rel="noopener" aria-label="07:00 a 09:00 h | ITÁ IBATÉ: Ruta n° 12 kilómetro 1.111 y zonas de influencia. | DPEC">
+        <img src="https://www.dpec.com.ar:443/content/DPEC/imagenes/DPEC-logo.png" alt="07:00 a 09:00 h | ITÁ IBATÉ: Ruta n° 12 kilómetro 1.111 y zonas de influencia. | DPEC" loading="lazy">
+      </a>
+      <div class="latest-item__body">
+        <div class="latest-item__kicker">Marco Legal (fuentes)</div>
+        <h3><a href="https://www.dpec.com.ar/8421/MIRCOLES-100626a-0700-a-0900-h-a-IT-IBAT-Ruta-n-12-kilometro-1111-y-zonas-de-influencia" target="_blank" rel="noopener">07:00 a 09:00 h | ITÁ IBATÉ: Ruta n° 12 kilómetro 1.111 y zonas de influencia. | DPEC</a></h3>
+        <p>Requisitos para el uso de soportes de la red eléctrica por empresas ajenas a la DPEC ... energía eléctrica en la localidad de ITÁ IBATÉ, de acuerdo al ...</p>
+        <div class="meta">10 jun 2026 · dpec.com.ar</div>
+      </div>
     </article>
 
-    <article class="latest-item">
-      <div class="latest-item__kicker">Marco Legal (fuentes)</div>
-      <h3><a href="https://www.dpec.com.ar/8423/MIRCOLES-100626-a-0800-a-1200-h-a-ITUZAING-Hospital-Dr-Billinghurst-B-Mbatara-calle-Posadas-hasta-Plaza-Centenario-y-zonas-de-influencia" target="_blank" rel="noopener">MIÉRCOLES 10/06/26 | 08:00 a 12:00 h | DPEC | Dirección Provincial de Energía de Corrientes</a></h3>
-      <p>Requisitos para el uso de soportes de la red eléctrica por empresas ajenas a la DPEC ... energía eléctrica en la localidad de ITUZAINGÓ, de acuerdo al ...</p>
-      <div class="meta">10 jun 2026 · dpec.com.ar</div>
+    <article class="latest-item latest-item--media">
+      <a class="latest-item__thumb" href="https://www.dpec.com.ar/8423/MIRCOLES-100626-a-0800-a-1200-h-a-ITUZAING-Hospital-Dr-Billinghurst-B-Mbatara-calle-Posadas-hasta-Plaza-Centenario-y-zonas-de-influencia" target="_blank" rel="noopener" aria-label="MIÉRCOLES 10/06/26 | 08:00 a 12:00 h | DPEC | Dirección Provincial de Energía de Corrientes">
+        <img src="https://www.dpec.com.ar:443/content/DPEC/imagenes/DPEC-logo.png" alt="MIÉRCOLES 10/06/26 | 08:00 a 12:00 h | DPEC | Dirección Provincial de Energía de Corrientes" loading="lazy">
+      </a>
+      <div class="latest-item__body">
+        <div class="latest-item__kicker">Marco Legal (fuentes)</div>
+        <h3><a href="https://www.dpec.com.ar/8423/MIRCOLES-100626-a-0800-a-1200-h-a-ITUZAING-Hospital-Dr-Billinghurst-B-Mbatara-calle-Posadas-hasta-Plaza-Centenario-y-zonas-de-influencia" target="_blank" rel="noopener">MIÉRCOLES 10/06/26 | 08:00 a 12:00 h | DPEC | Dirección Provincial de Energía de Corrientes</a></h3>
+        <p>Requisitos para el uso de soportes de la red eléctrica por empresas ajenas a la DPEC ... energía eléctrica en la localidad de ITUZAINGÓ, de acuerdo al ...</p>
+        <div class="meta">10 jun 2026 · dpec.com.ar</div>
+      </div>
     </article>
       
       </div>
